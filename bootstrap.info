@@ -1,7 +1,7 @@
 name = Bootstrap
 description = Built to use Bootstrap, a sleek, intuitive, and powerful front-end framework for faster and easier web development.
-core = 7.x
-
+version = 1.x-3.0
+backdrop = 1.x
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Regions
@@ -133,15 +133,4 @@ exclude[css][] = 'modules/user/user.css'
 ;exclude[css][] = 'modules/system/system.base.css'
 
 
-;;;;;;;;;;;;;;;;;;;;;
-;; SimplyTest.me
-;;;;;;;;;;;;;;;;;;;;;
-
-simplytest_dependencies[] = jquery_update
-
-; Information added by  packaging script on 2013-11-17
-version = "7.x-3.0"
-core = "7.x"
-project = "bootstrap"
-datestamp = "1384678107"
 
