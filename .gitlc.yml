@@ -1,0 +1,5 @@
+deploy:
+  master:
+    server: alpha.robin-panel.org
+    user: rp
+    dir: '{home}/github/bootstrap/branch/{branch}'
