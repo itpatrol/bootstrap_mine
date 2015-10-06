@@ -41,14 +41,14 @@ include_once dirname(__FILE__) . '/theme/common.inc';
  * invocation of theme().
  *
  * @see _bootstrap_theme()
- */
+
 function bootstrap_theme(&$existing, $type, $theme, $path) {
   echo "1";
   bootstrap_include($theme, 'theme/registry.inc');
   print_r(_bootstrap_theme($existing, $type, $theme, $path));
   return _bootstrap_theme($existing, $type, $theme, $path);
 }
-
+ */
 /**
  * Declare various hook_*_alter() hooks.
  *
