@@ -139,7 +139,7 @@ function _bootstrap_settings_form(&$form, $form_state) {
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
   );
-  foreach (system_region_list($theme) as $name => $title) {
+  /*foreach (system_region_list($theme) as $name => $title) {
     $form['components']['region_wells']['bootstrap_region_well-' . $name] = array(
       '#title' => $title,
       '#type' => 'select',
@@ -149,7 +149,7 @@ function _bootstrap_settings_form(&$form, $form_state) {
       '#options' => $wells,
       '#default_value' => theme_get_setting('bootstrap_region_well-' . $name),
     );
-  }
+  }*/
 
   // JavaScript settings.
   $form['javascript'] = array(
