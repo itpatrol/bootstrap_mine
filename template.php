@@ -63,6 +63,9 @@ bootstrap_include('bootstrap', 'theme/alter.inc');
 function bootstrap_preprocess_layout(&$variables) {
 
 }
+function bootstrap_preprocess_page(&$variables){
+  print_r($variables);
+}
 
 function bootstrap_preprocess_header(&$variables){
   $variables['navbar_classes'] = 'navbar navbar-fixed-top navbar-default';
