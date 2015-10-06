@@ -68,7 +68,7 @@ function bootstrap_preprocess_layout(&$variables) {
  * Implements theme_menu_tree().
  */
 function bootstrap_menu_tree($variables) {
-  return '<header id="navbar" role="banner" class="navbar navbar-default">
+  return '<header id="navbar" role="banner" class="navbar navbar-fixed-top navbar-default">
   <div class="container">
     <div class="navbar-header">
 
