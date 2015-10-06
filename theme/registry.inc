@@ -125,8 +125,8 @@ function bootstrap_hook_theme_complete(&$registry, $theme, $path) {
     $registry,
     bootstrap_find_theme_includes($registry, '.vars.php', $path),
     bootstrap_find_theme_includes($registry, '.func.php', $path),
-    drupal_find_theme_functions($registry, array($theme)),
-    drupal_find_theme_templates($registry, '.tpl.php', $path)
+    backdrop_find_theme_functions($registry, array($theme)),
+    backdrop_find_theme_templates($registry, '.tpl.php', $path)
   );
   // Post-process the theme registry.
   foreach ($registry as $hook => $info) {
