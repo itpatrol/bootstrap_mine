@@ -64,7 +64,7 @@ function bootstrap_preprocess_layout(&$variables) {
 
 }
 
-function hook_preprocess_header(&$variables){
+function bootstrap_preprocess_header(&$variables){
   print_r($variables);
 }
 
