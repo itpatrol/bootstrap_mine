@@ -64,32 +64,6 @@ function bootstrap_preprocess_layout(&$variables) {
 
 }
 
-/**
- * Implements theme_menu_tree().
- */
-function bootstrap_menu_tree($variables) {
-  return '<header id="navbar" role="banner" class="navbar navbar-fixed-top navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <div class="navbar-collapse collapse">
-      <nav role="navigation">
-        <ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul>
-      </nav>
-    </div>
-  </div>
-</header>';
-}
-
 /*
   <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="container">
