@@ -56,3 +56,10 @@ function bootstrap_theme(&$existing, $type, $theme, $path) {
  * they are properly detected when drupal_alter() is invoked.
  */
 bootstrap_include('bootstrap', 'theme/alter.inc');
+
+/**
+ * Implements hook_preprocess_layout().
+ */
+function bootstrap_preprocess_layout(&$variables) {
+  print_r($variables);
+}
