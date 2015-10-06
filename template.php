@@ -65,6 +65,7 @@ function bootstrap_preprocess_layout(&$variables) {
 }
 function bootstrap_preprocess_page(&$variables){
   print_r($variables);
+  $variables['classes'][] = 'navbar-is-fixed-top';
 }
 
 function bootstrap_preprocess_header(&$variables){
