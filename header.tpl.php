@@ -40,10 +40,10 @@
       </button>
     </div>
     
-    <?php if ($menu): ?>
+    <?php if ($navigation): ?>
       <div class="navbar-collapse collapse">
         <nav role="navigation">
-        <?php print $menu; ?>
+        <?php print $navigation; ?>
         </nav>
       </div>
     <?php endif; ?>
