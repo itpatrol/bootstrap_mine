@@ -64,6 +64,10 @@ function bootstrap_preprocess_layout(&$variables) {
 
 }
 
+function hook_preprocess_header(&$variables){
+  print_r($variables);
+}
+
 /*
   <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="container">
