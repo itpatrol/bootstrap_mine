@@ -129,7 +129,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#options' => drupal_map_assoc(array(
       '3.3.5',
     )),
-    '#default_value' => theme_get_setting('bootstrap_cdn'),
+    '#default_value' => theme_get_setting('bootstrap_cdn', 'bootstrap'),
     '#empty_option' => t('Disabled'),
     '#empty_value' => NULL,
   );
@@ -151,7 +151,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
         'external' => TRUE,
       )),
     )),
-    '#default_value' => theme_get_setting('bootstrap_bootswatch'),
+    '#default_value' => theme_get_setting('bootstrap_bootswatch', 'bootstrap'),
     '#options' => $bootswatch_themes,
     '#empty_option' => t('Disabled'),
     '#empty_value' => NULL,
