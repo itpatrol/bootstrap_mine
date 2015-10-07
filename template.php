@@ -84,8 +84,12 @@ function bootstrap_preprocess_header(&$variables){
     $variables['navbar_classes_array'][] = 'container';
   }
   
-  $variables['navbar_classes_array'][] = 'navbar-default';
-  
+  if (theme_get_setting('bootstrap_navbar_inverse')) {
+    $variables['navbar_classes_array'][] = 'navbar-inverse';
+  }
+  else {
+    $variables['navbar_classes_array'][] = 'navbar-default';
+  }
 }
 
 function bootstrap_menu_tree($variables){
