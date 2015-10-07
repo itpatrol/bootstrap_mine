@@ -29,7 +29,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#type' => 'select',
     '#title' => t('Navbar Position'),
     '#description' => t('Select your Navbar position.'),
-    '#default_value' => theme_get_setting('bootstrap_navbar_position'),
+    '#default_value' => theme_get_setting('bootstrap_navbar_position', 'bootstrap'),
     '#options' => array(
       'static-top' => t('Static Top'),
       'fixed-top' => t('Fixed Top'),
@@ -43,5 +43,5 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#description' => t('Select if you want the inverse navbar style.'),
     '#default_value' => theme_get_setting('bootstrap_navbar_inverse'),
   );
-
+  
 }
