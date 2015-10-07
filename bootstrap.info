@@ -4,6 +4,7 @@ version = 1.x-3.0
 backdrop = 1.x
 
 
+stylesheets[all][] = css/overrides.css
 stylesheets[all][] = css/style.css
 
 
