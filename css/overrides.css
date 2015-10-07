@@ -10,10 +10,6 @@ html.js input.form-autocomplete{
   background-image:none
 }
 
-body{
-  position:relative
-}
-
 body.admin-expanded.admin-vertical.admin-nw .navbar,body.admin-expanded.admin-vertical.admin-sw .navbar{
   margin-left:260px
 }
