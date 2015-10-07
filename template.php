@@ -63,9 +63,15 @@ bootstrap_include('bootstrap', 'theme/alter.inc');
 function bootstrap_preprocess_layout(&$variables) {
   $layout = $variables['layout'];
   print_r($layout->positions);
-  echo $layout->layout;
+  $layout_name = $layout->layout;
   
-  backdrop_add_js('(function($){alert("layout: '.$layout->layout.'");})(jQuery);', array('type' => 'inline', 'scope' => 'footer', 'weight' => -8));
+  foreach($layout->positions as $region_name => $region_value){
+    if($variable_name = theme_get_setting('bootstrap_well_' . $layout_name . '_' . $region_name)){
+      backdrop_add_js('(function($){alert("layout: '.$variable_name.'");})(jQuery);', array('type' => 'inline', 'scope' => 'footer', 'weight' => -8));
+
+    }
+  }
+  
 }
 
 function bootstrap_preprocess_page(&$variables){
