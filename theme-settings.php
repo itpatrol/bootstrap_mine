@@ -3,27 +3,45 @@
  * @file
  * theme-settings.php
  *
- * Provides theme settings for Bootstrap based themes when admin theme is not.
- *
- * @see theme/settings.inc
+ * Theme settings file for Bootstrap.
  */
 
-/**
- * Include common Bootstrap functions.
- */
-include_once dirname(__FILE__) . '/theme/common.inc';
+function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_id = NULL) {
 
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function bootstrap_form_system_theme_settings_alter(&$form, $form_state, $form_id = NULL) {
-  // Work-around for a core bug affecting admin themes.
-  // @see https://drupal.org/node/943212
   if (isset($form_id)) {
     return;
   }
-  // Include theme settings file.
-  bootstrap_include('bootstrap', 'theme/settings.inc');
-  // Alter theme settings form.
-  _bootstrap_settings_form($form, $form_state);
+
+  // Components.
+  $form['components'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Components'),
+    '#group' => 'bootstrap',
+  );
+
+  $form['components']['navbar'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Navbar'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['components']['navbar']['bootstrap_navbar_position'] = array(
+    '#type' => 'select',
+    '#title' => t('Navbar Position'),
+    '#description' => t('Select your Navbar position.'),
+    '#default_value' => theme_get_setting('bootstrap_navbar_position'),
+    '#options' => array(
+      'static-top' => t('Static Top'),
+      'fixed-top' => t('Fixed Top'),
+      'fixed-bottom' => t('Fixed Bottom'),
+    ),
+    '#empty_option' => t('Normal'),
+  );
+  $form['components']['navbar']['bootstrap_navbar_inverse'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Inverse navbar style'),
+    '#description' => t('Select if you want the inverse navbar style.'),
+    '#default_value' => theme_get_setting('bootstrap_navbar_inverse'),
+  );
+
 }
