@@ -10,10 +10,10 @@
 
     jQuery(window).scroll(function() {
       var win = jQuery(this);
-      if (win.scrollTop() > 30) {
+      if (win.scrollTop() > 33) {
         $("html.admin-bar header.navbar-fixed-top").css("top", "0px");
       } else {
-        $("html.admin-bar header.navbar-fixed-top").css("top",  win.scrollTop() + "px");
+        $("html.admin-bar header.navbar-fixed-top").css("top",  (33 - win.scrollTop()) + "px");
       }
     });
 
