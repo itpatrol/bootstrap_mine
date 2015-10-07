@@ -76,6 +76,14 @@ function bootstrap_preprocess_page(&$variables){
 function bootstrap_preprocess_header(&$variables){
 /*  $menu = menu_tree('main-menu');
   $variables['navigation'] = render($menu);*/
+  
+  $variables['navigation'] = '';
+  
+  if($navbar_position = theme_get_setting('bootstrap_navbar_user_menu'))
+  {
+    $variables['navigation'] = render(menu_tree('user-menu'));
+  }
+  
   $variables['navbar_classes_array'] = array('navbar');
   if($navbar_position = theme_get_setting('bootstrap_navbar_position'))
   {
@@ -105,6 +113,13 @@ function bootstrap_links__header_menu($menu){
   $menu['attributes']['class'] = array('menu','nav','navbar-nav');
   if($navbar_menu_position = theme_get_setting('bootstrap_navbar_menu_position')){
     $menu['attributes']['class'][] = $navbar_menu_position;
+  }
+  return theme_links($menu);
+}
+
+function bootstrap_links__user_menu($menu){
+  if($navbar_position = theme_get_setting('bootstrap_navbar_user_menu')){
+    $menu['attributes']['class'] = array('dropdown-menu');
   }
   return theme_links($menu);
 }
