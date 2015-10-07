@@ -14,12 +14,6 @@ body.admin-expanded.admin-vertical.admin-nw .navbar,body.admin-expanded.admin-ve
   margin-left:260px
 }
 
-body.navbar-is-fixed-top{
-}
-
-body.navbar-admin-bar .navbar-fixed-top{
-}
-
 body.navbar-is-fixed-bottom{
   padding-bottom:64px!important
 }
