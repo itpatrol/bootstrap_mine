@@ -22,6 +22,10 @@ body.navbar-is-fixed-top{
   padding-top:64px!important
 }
 
+body.navbar-admin-bar{
+  top:32px;
+}
+
 body.navbar-is-fixed-bottom{
   padding-bottom:64px!important
 }
