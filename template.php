@@ -102,15 +102,6 @@ function bootstrap_preprocess_header(&$variables){
   }
 }
 
-/*
-function bootstrap_menu_tree($variables){
-  
-  $navbar_menu_position = theme_get_setting('bootstrap_navbar_menu_position');
-  print_r($navbar_menu_position);
-  
-  return '<ul class="menu nav navbar-nav ' . $navbar_menu_position. ' ">' . $variables['tree'] . '</ul>';
-}*/
-
 function bootstrap_links__header_menu($menu){
   $menu['attributes']['class'] = array('menu','nav','navbar-nav');
   if($navbar_menu_position = theme_get_setting('bootstrap_navbar_menu_position')){
@@ -120,7 +111,6 @@ function bootstrap_links__header_menu($menu){
 }
 
 function bootstrap_menu_tree__user_menu($variables){
-  print_r($variables);
   if($navbar_position = theme_get_setting('bootstrap_navbar_user_menu')){
     return '
 <ul class="menu nav navbar-nav navbar-right">

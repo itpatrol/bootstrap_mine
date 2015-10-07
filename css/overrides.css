@@ -543,3 +543,7 @@ table .radio input[type=radio],table .checkbox input[type=checkbox]{
 .alert-danger a{
   color:#953b39
 }
+
+li.dropdown span.glyphicon.glyphicon-cog {
+  font-size: 1.4em;
+}
