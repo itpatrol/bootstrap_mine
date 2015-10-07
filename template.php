@@ -66,7 +66,7 @@ function bootstrap_preprocess_layout(&$variables) {
   
   foreach($layout->positions as $region_name => $region_value){
     if($well = theme_get_setting('bootstrap_well_' . $layout_name . '_' . $region_name)){
-      backdrop_add_js('(function($){ $("div.l-' . $region_name . '").addClass("' . $well . '");})(jQuery);', array('type' => 'inline', 'scope' => 'footer'));
+      backdrop_add_js('(function($){ $(".l-' . $region_name . '").addClass("' . $well . '");})(jQuery);', array('type' => 'inline', 'scope' => 'footer'));
     }
   }
   
