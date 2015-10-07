@@ -1,14 +1,22 @@
-(function ($) {
-
-Backdrop.bootstrap = Backdrop.bootstrap || {};
-Backdrop.bootstrap.behaviors = Backdrop.bootstrap.behaviors || {};
 /**
- * Attach administrative behaviors.
+ * @file
+ * JS fixed top nav bar .
  */
-Backdrop.bootstrap.attachBehaviors = function (context, settings) {
-  $("body.navbar-is-fixed-top" ).scroll(function() {
-    alert('test');
-  });
-};
+(function($, Backdrop, window, document, undefined) {
+  $(document).ready(function() {
 
-})(jQuery);
+    // run Javascript on page load here
+    console.log("Welcome to the console");
+
+    jQuery(window).scroll(function() {
+      var win = jQuery(this);
+      if (win.scrollTop() > 30) {
+        $("html.admin-bar header.l-header").css("top", "0px");
+      } else {
+        $("html.admin-bar header.l-header").css("top", "32px");
+      }
+    });
+
+
+  });
+})(jQuery, Backdrop, this, this.document);
