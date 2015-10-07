@@ -41,7 +41,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#type' => 'checkbox',
     '#title' => t('Inverse navbar style'),
     '#description' => t('Select if you want the inverse navbar style.'),
-    '#default_value' => theme_get_setting('bootstrap_navbar_inverse'),
+    '#default_value' => theme_get_setting('bootstrap_navbar_inverse', 'bootstrap'),
   );
   
 }
