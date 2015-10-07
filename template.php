@@ -68,9 +68,7 @@ function bootstrap_preprocess_page(&$variables){
     $variables['classes'][] = 'navbar-admin-bar';
   }
   $navbar_position = theme_get_setting('bootstrap_navbar_position');
-  echo $navbar_position;
-  $variables['classes'][] = 'navbar-is-fixed-top';
-  $variables['classes'][] = $navbar_position;
+  $variables['classes'][] = 'navbar-is-' . $navbar_position;
 }
 
 function bootstrap_preprocess_header(&$variables){
