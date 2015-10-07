@@ -69,9 +69,8 @@ function bootstrap_preprocess_page(&$variables){
 
 function bootstrap_preprocess_header(&$variables){
 /*  $menu = menu_tree('main-menu');
-  $variables['navigation'] = render($menu);
+  $variables['navigation'] = render($menu);*/
   $variables['navbar_classes'] = 'navbar navbar-fixed-top navbar-default';
-  print_r($variables);*/
 }
 
 function bootstrap_menu_tree($variables){
