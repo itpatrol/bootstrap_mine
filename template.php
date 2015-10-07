@@ -115,6 +115,16 @@ function bootstrap_preprocess_layout(&$variables) {
 }
 
 function bootstrap_preprocess_page(&$variables){
+
+  $no_old_ie_compatibility_modes = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'X-UA-Compatible',
+      'content' => 'IE=edge',
+    ),
+  );
+  backdrop_add_html_head($no_old_ie_compatibility_modes, 'no_old_ie_compatibility_modes');
+    
   if (user_access('access administration bar') && !admin_bar_suppress(FALSE)) {
     $variables['classes'][] = 'navbar-admin-bar';
   }
