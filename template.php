@@ -68,8 +68,7 @@ function bootstrap_preprocess_page(&$variables){
 }
 
 function bootstrap_preprocess_header(&$variables){
-  print_r(menu_tree('main-menu'));
-  $variables['navigation'] = '<ul class="menu nav navbar-nav">' . menu_tree('main-menu'). '</ul>';
+  $variables['navigation'] = '<ul class="menu nav navbar-nav">' . render(menu_tree('main-menu')). '</ul>';
   $variables['navbar_classes'] = 'navbar navbar-fixed-top navbar-default';
   print_r($variables);
 }
