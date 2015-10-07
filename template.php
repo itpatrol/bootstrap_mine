@@ -78,7 +78,6 @@ function bootstrap_menu_tree($variables){
 }
 
 function bootstrap_links__header_menu($menu){
-  print_r($menu);
   $menu['attributes']['class'] = array('menu','nav','navbar-nav');
   return theme_links($menu);
 }
