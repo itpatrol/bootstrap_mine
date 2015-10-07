@@ -61,7 +61,7 @@ bootstrap_include('bootstrap', 'theme/alter.inc');
  * Implements hook_preprocess_layout().
  */
 function bootstrap_preprocess_layout(&$variables) {
-  print_r($variables);
+//  print_r($variables);
 }
 function bootstrap_preprocess_page(&$variables){
   if (user_access('access administration bar') && !admin_bar_suppress(FALSE)) {
