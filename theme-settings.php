@@ -56,5 +56,13 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#description' => t('Select if you want the inverse navbar style.'),
     '#default_value' => theme_get_setting('bootstrap_navbar_inverse', 'bootstrap'),
   );
+
+  $form['components']['navbar']['bootstrap_navbar_user_menu'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Add cog with user-menu'),
+    '#description' => t('Select if you want cog style right pulled popup menu.'),
+    '#default_value' => theme_get_setting('bootstrap_navbar_user_menu', 'bootstrap'),
+  );
+
   
 }
