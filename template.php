@@ -70,11 +70,15 @@ function bootstrap_preprocess_page(&$variables){
 function bootstrap_preprocess_header(&$variables){
   $menu = menu_tree('main-menu');
   print_r($menu);
-  $variables['navigation'] = '<ul class="menu nav navbar-nav">' . '</ul>';
+  $menu['theme_wrappers'] = array('bootstrap_menu_theme_wrapper');
+  $variables['navigation'] = $menu;
   $variables['navbar_classes'] = 'navbar navbar-fixed-top navbar-default';
   print_r($variables);
 }
 
+function bootstrap_menu_theme_wrapper($variables){
+  return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul>';
+}
 /*
   <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="container">

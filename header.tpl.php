@@ -43,7 +43,7 @@
     <?php if ($navigation): ?>
       <div class="navbar-collapse collapse">
         <nav role="navigation">
-        <?php print $navigation; ?>
+        <?php print render($navigation); ?>
         </nav>
       </div>
     <?php endif; ?>
