@@ -4,6 +4,7 @@
  */
 (function($, Backdrop, window, document, undefined) {
   $(document).ready(function() {
+    alert('test');
     $("#navbar").addClass('navbar-fixed-top');
     $("#navbar").removeClass('navbar-static-top');
 
