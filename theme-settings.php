@@ -63,6 +63,9 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#description' => t('Select if you want cog style right pulled popup menu.'),
     '#default_value' => theme_get_setting('bootstrap_navbar_user_menu', 'bootstrap'),
   );
+  
+   $layouts = layout_get_layout_info();
+   print_r($layouts);
 
   
 }
