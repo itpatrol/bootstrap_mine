@@ -81,7 +81,8 @@ function bootstrap_preprocess_header(&$variables){
   
   if($navbar_position = theme_get_setting('bootstrap_navbar_user_menu'))
   {
-    $variables['navigation'] = render(menu_tree('user-menu'));
+    $user_menu = menu_tree('user-menu');
+    $variables['navigation'] = render($user_menu);
   }
   
   $variables['navbar_classes_array'] = array('navbar');
