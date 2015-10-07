@@ -94,7 +94,7 @@ function bootstrap_preprocess_header(&$variables){
 
 function bootstrap_menu_tree($variables){
   
-  $navbar_menu_position = theme_get_setting('bootstrap_navbar_menu_position'));
+  $navbar_menu_position = theme_get_setting('bootstrap_navbar_menu_position');
   
   return '<ul class="menu nav navbar-nav ' . $navbar_menu_position. ' ">' . $variables['tree'] . '</ul>';
 }
