@@ -64,7 +64,7 @@ function bootstrap_preprocess_layout(&$variables) {
 
 }
 function bootstrap_preprocess_page(&$variables){
-  if (user_access('access administration bar') || !admin_bar_suppress(FALSE)) {
+  if (user_access('access administration bar') && !admin_bar_suppress(FALSE)) {
     $variables['classes'][] = 'navbar-admin-bar';
   }
   $variables['classes'][] = 'navbar-is-fixed-top';
