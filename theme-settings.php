@@ -87,6 +87,8 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     $form['components']['region_wells'][$layout_name]  = array(
       '#type' => 'fieldset',
       '#title' => t('!layout_title region wells', array('!layout_title' => $layout['title'])),
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
     );
     
     foreach($layout['regions'] as $region_name => $region_title ){
