@@ -69,13 +69,12 @@ function bootstrap_preprocess_page(&$variables){
 
 function bootstrap_preprocess_header(&$variables){
   $menu = menu_tree('main-menu');
-  $menu['#theme_wrappers'] = array('bootstrap_menu_theme_wrapper');
-  $variables['navigation'] = $menu;
+  $variables['navigation'] = render($menu);
   $variables['navbar_classes'] = 'navbar navbar-fixed-top navbar-default';
   print_r($variables);
 }
 
-function bootstrap_menu_theme_wrapper($variables){
+function bootstrap_menu_tree($variables){
   print_r($variables);
   return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul>';
 }
