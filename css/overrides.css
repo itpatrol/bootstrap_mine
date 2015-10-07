@@ -544,6 +544,6 @@ table .radio input[type=radio],table .checkbox input[type=checkbox]{
   color:#953b39
 }
 
-li.dropdown span.glyphicon.glyphicon-cog {
+.navbar-nav span.glyphicon.glyphicon-cog {
   font-size: 1.4em;
 }
