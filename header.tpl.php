@@ -44,7 +44,7 @@
       <div class="navbar-collapse collapse">
         <nav role="navigation">
         <?php if ($navigation) print $navigation; ?>
-        <?php if ($menu) print "menu:".$menu; ?>
+        <?php if ($menu) print $menu; ?>
         </nav>
       </div>
     <?php endif; ?>
