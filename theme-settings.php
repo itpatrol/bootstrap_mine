@@ -37,6 +37,19 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     ),
     '#empty_option' => t('Normal'),
   );
+  
+  $form['components']['navbar']['bootstrap_navbar_menu_position'] = array(
+    '#type' => 'select',
+    '#title' => t('Navbar Menu Position'),
+    '#description' => t('Select your Navbar Menu position.'),
+    '#default_value' => theme_get_setting('bootstrap_navbar_menu_position', 'bootstrap'),
+    '#options' => array(
+      'navbar-left' => t('Left'),
+      'navbar-right' => t('Right'),
+    ),
+    '#empty_option' => t('Normal'),
+  );
+  
   $form['components']['navbar']['bootstrap_navbar_inverse'] = array(
     '#type' => 'checkbox',
     '#title' => t('Inverse navbar style'),
