@@ -139,7 +139,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
   if ($request && $request->code === '200' && !empty($request->data)) {
     if (($api = drupal_json_decode($request->data)) && is_array($api) && !empty($api['themes'])) {
       foreach ($api['themes'] as $bootswatch_theme) {
-        $bootswatch_themes[strtolower($bootswatch_theme['name'])] = $bootswatch_theme['name'] . '<img src="'.$bootswatch_theme['thumbnail'].'" class="img-thumbnail" width=100>';
+        $bootswatch_themes[strtolower($bootswatch_theme['name'])] = $bootswatch_theme['name'] . '<img src="'.$bootswatch_theme['thumbnail'].'" class="img-thumbnail thumbnail" width=100>';
       }
     }
   }
