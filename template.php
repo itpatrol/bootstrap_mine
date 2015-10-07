@@ -79,7 +79,7 @@ function bootstrap_menu_tree($variables){
   return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul>';
 }
 
-function bootstrap_links__header_menu(){
+function bootstrap_links__header_menu($variables){
   print_r($variables);
   return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul>';  
 }
