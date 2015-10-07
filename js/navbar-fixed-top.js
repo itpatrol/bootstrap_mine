@@ -1,5 +1,6 @@
 (function ($) {
 
+Backdrop.bootstrap = Backdrop.bootstrap || {};
 Backdrop.bootstrap.behaviors = Backdrop.bootstrap.behaviors || {};
 /**
  * Attach administrative behaviors.
