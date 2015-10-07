@@ -80,7 +80,7 @@ function bootstrap_menu_tree($variables){
 }
 
 function bootstrap_links__header_menu($menu){
-  return theme('links', array('links' => $menu, 'class' => 'menu nav navbar-nav'));
+  print_r($menu);
 }
 /*
   <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
