@@ -78,6 +78,11 @@ function bootstrap_menu_tree($variables){
   print_r($variables);
   return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul>';
 }
+
+function bootstrap_links__header_menu(){
+  print_r($variables);
+  return '<ul class="menu nav navbar-nav">' . $variables['tree'] . '</ul>';  
+}
 /*
   <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="container">
