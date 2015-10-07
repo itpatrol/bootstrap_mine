@@ -74,7 +74,9 @@ function bootstrap_preprocess_page(&$variables){
 function bootstrap_preprocess_header(&$variables){
 /*  $menu = menu_tree('main-menu');
   $variables['navigation'] = render($menu);*/
-  $variables['navbar_classes'] = 'navbar navbar-fixed-top navbar-default';
+  $navbar_position = theme_get_setting('bootstrap_navbar_position');
+  
+  $variables['navbar_classes'] = 'navbar navbar-' . $navbar_position . ' navbar-default';
 }
 
 function bootstrap_menu_tree($variables){
