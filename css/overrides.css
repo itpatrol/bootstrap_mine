@@ -135,6 +135,9 @@ body #admin-menu .dropdown li{
 .navbar .logo{
   margin-right:-15px;padding-left:15px;padding-right:15px;
 }
+.navbar .logo img{
+  height: 32px;
+}
 
 @media screen and (min-width:768px){
   .navbar .logo{
