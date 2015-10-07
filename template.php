@@ -83,7 +83,6 @@ function bootstrap_preprocess_header(&$variables){
   {
     $user_menu = menu_tree('user-menu');
     $variables['navigation'] = render($user_menu);
-    print_r($variables['navigation']);
   }
   
   $variables['navbar_classes_array'] = array('navbar');
