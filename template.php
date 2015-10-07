@@ -67,16 +67,25 @@ function bootstrap_preprocess_page(&$variables){
   if (user_access('access administration bar') && !admin_bar_suppress(FALSE)) {
     $variables['classes'][] = 'navbar-admin-bar';
   }
-  $navbar_position = theme_get_setting('bootstrap_navbar_position');
-  $variables['classes'][] = 'navbar-is-' . $navbar_position;
+  if($navbar_position = theme_get_setting('bootstrap_navbar_position'))
+  {
+    $variables['classes'][] = 'navbar-is-' . $navbar_position;
+  }
 }
 
 function bootstrap_preprocess_header(&$variables){
 /*  $menu = menu_tree('main-menu');
   $variables['navigation'] = render($menu);*/
-  $navbar_position = theme_get_setting('bootstrap_navbar_position');
+  $variables['navbar_classes_array'] = array('navbar');
+  if($navbar_position = theme_get_setting('bootstrap_navbar_position'))
+  {
+    $variables['navbar_classes_array'][] = 'navbar-' . $navbar_position;
+  } else {
+    $variables['navbar_classes_array'][] = 'container';
+  }
   
-  $variables['navbar_classes'] = 'navbar navbar-' . $navbar_position . ' navbar-default';
+  $variables['navbar_classes_array'][] = 'navbar-default';
+  
 }
 
 function bootstrap_menu_tree($variables){

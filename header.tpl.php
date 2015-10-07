@@ -19,7 +19,7 @@
  * - $menu: The menu for the header (if any), as an HTML string.
  */
 ?>
-<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+<header id="navbar" role="banner" class="<?php print implode(" ",$navbar_classes_array); ?>">
   <div class="container">
     <div class="navbar-header">
     <?php if ($logo): ?>
