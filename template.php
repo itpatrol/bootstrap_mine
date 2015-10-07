@@ -61,8 +61,8 @@ bootstrap_include('bootstrap', 'theme/alter.inc');
  * Implements hook_preprocess_layout().
  */
 function bootstrap_preprocess_layout(&$variables) {
-  $layout_name = $variables['layout']['layout'];
-  $layout = layout_get_layout_info($layout_name);
+  $layout = $variables['layout'];
+//  $layout = layout_get_layout_info($layout_name);
   print_r($layout);
 }
 function bootstrap_preprocess_page(&$variables){
