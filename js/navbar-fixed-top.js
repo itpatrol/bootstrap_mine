@@ -11,9 +11,9 @@
     jQuery(window).scroll(function() {
       var win = jQuery(this);
       if (win.scrollTop() > 30) {
-        $("html.admin-bar header.l-header").css("top", "0px");
+        $("html.admin-bar header.navbar-fixed-top").css("top", "0px");
       } else {
-        $("html.admin-bar header.l-header").css("top", "32px");
+        $("html.admin-bar header.navbar-fixed-top").css("top", "32px");
       }
     });
 
