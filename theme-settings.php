@@ -127,9 +127,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#type' => 'select',
     '#title' => t('BootstrapCDN version'),
     '#options' => drupal_map_assoc(array(
-      '3.0.0',
-      '3.0.1',
-      '3.0.2',
+      '3.3.5',
     )),
     '#default_value' => theme_get_setting('bootstrap_cdn'),
     '#empty_option' => t('Disabled'),
