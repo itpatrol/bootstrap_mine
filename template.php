@@ -63,7 +63,11 @@ bootstrap_include('bootstrap', 'theme/alter.inc');
 function bootstrap_preprocess_layout(&$variables) {
   $layout = $variables['layout'];
   print_r($layout->positions);
+  echo $layout->layout;
+  
+  backdrop_add_js('(function($){alert("layout: '.$layout->layout.'");})(jQuery);', array('type' => 'inline', 'scope' => 'footer', 'weight' => -8));
 }
+
 function bootstrap_preprocess_page(&$variables){
   if (user_access('access administration bar') && !admin_bar_suppress(FALSE)) {
     $variables['classes'][] = 'navbar-admin-bar';
