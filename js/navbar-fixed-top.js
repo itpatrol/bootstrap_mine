@@ -4,16 +4,17 @@
  */
 (function($, Backdrop, window, document, undefined) {
   $(document).ready(function() {
-
-    // run Javascript on page load here
-    console.log("Welcome to the console");
+    $("#navbar").addClass('navbar-fixed-top');
+    $("#navbar").removeClass('navbar-static-top');
 
     jQuery(window).scroll(function() {
       var win = jQuery(this);
       if (win.scrollTop() > 33) {
-        $("html.admin-bar header.navbar-fixed-top").css("top", "0px");
+        $("#navbar").addClass('navbar-fixed-top');
+        $("#navbar").removeClass('navbar-static-top');
       } else {
-        $("html.admin-bar header.navbar-fixed-top").css("top",  (33 - win.scrollTop()) + "px");
+        $("#navbar").removeClass('navbar-fixed-top');
+        $("#navbar").addClass('navbar-static-top');
       }
     });
 
