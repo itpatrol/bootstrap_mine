@@ -70,7 +70,7 @@ function bootstrap_preprocess_page(&$variables){
 function bootstrap_preprocess_header(&$variables){
   $menu = menu_tree('main-menu');
   print_r($menu);
-  $menu['theme_wrappers'] = array('bootstrap_menu_theme_wrapper');
+  $menu['#theme_wrappers'] = array('bootstrap_menu_theme_wrapper');
   $variables['navigation'] = $menu;
   $variables['navbar_classes'] = 'navbar navbar-fixed-top navbar-default';
   print_r($variables);
