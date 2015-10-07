@@ -144,7 +144,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     }
   }
   $form['advanced']['bootstrap_cdn']['bootstrap_bootswatch'] = array(
-    '#type' => 'checkboxes',
+    '#type' => 'radios',
     '#title' => t('Bootswatch theme'),
     '#description' => t('Use !bootstrapcdn to serve a Bootswatch Theme. Choose Bootswatch theme here.', array(
       '!bootstrapcdn' => l(t('BootstrapCDN'), 'http://bootstrapcdn.com', array(
