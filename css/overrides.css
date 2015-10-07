@@ -18,6 +18,10 @@ body.navbar-is-fixed-top{
   padding-top:64px!important
 }
 
+body.navbar-admin-bar .navbar-fixed-top{
+  top: 33px;
+}
+
 body.navbar-is-fixed-bottom{
   padding-bottom:64px!important
 }
