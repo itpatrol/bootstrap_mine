@@ -64,8 +64,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#default_value' => theme_get_setting('bootstrap_navbar_user_menu', 'bootstrap'),
   );
   
-   $layouts = layout_get_layout_info();
-   print_r($layouts);
+  $layouts = layout_get_layout_info();
    
   $wells = array(
     '' => t('None'),
