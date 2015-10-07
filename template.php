@@ -122,7 +122,15 @@ function bootstrap_links__header_menu($menu){
 function bootstrap_menu_tree__user_menu($variables){
   print_r($variables);
   if($navbar_position = theme_get_setting('bootstrap_navbar_user_menu')){
-    $menu['attributes']['class'] = array('dropdown-menu');
+    return '
+<ul class="menu nav navbar-nav navbar-right">
+  <li class="dropdown">
+    <a href="#" class="user-cog-link dropdown-toggle" data-toggle="dropdown"> <span class="glyphicon glyphicon-cog"></span></a>
+    <ul class="dropdown-menu">
+    ' . $variables['tree'] . '
+    </ul>
+  </li>
+</ul>';
   }
-  return theme_links($menu);
+  return theme_menu_tree($variables);
 }
