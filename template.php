@@ -62,8 +62,7 @@ bootstrap_include('bootstrap', 'theme/alter.inc');
  */
 function bootstrap_preprocess_layout(&$variables) {
   $layout = $variables['layout'];
-//  $layout = layout_get_layout_info($layout_name);
-  print_r($layout);
+  print_r($layout->positions);
 }
 function bootstrap_preprocess_page(&$variables){
   if (user_access('access administration bar') && !admin_bar_suppress(FALSE)) {
