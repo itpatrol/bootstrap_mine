@@ -1,10 +1,11 @@
 name = Bootstrap
 description = Built to use Bootstrap, a sleek, intuitive, and powerful front-end framework for faster and easier web development.
-version = 1.x-3.0
+version = 1.x-3.3.5
 backdrop = 1.x
 
 
-stylesheets[all][] = css/overrides.css
+settings[bootstrap_cdn] = 3.3.5
+
 stylesheets[all][] = css/style.css
 
 
