@@ -170,5 +170,6 @@ function bootstrap_bootswatch_template($bootswatch_theme){
       <h3>' . $bootswatch_theme['name'] . '</h3>
       <p>' . $bootswatch_theme['description'] . '</p>
       <div class="btn-group"><a class="btn btn-info" href="' . $bootswatch_theme['preview'] . '" target="_blank">Preview</a></div>
-    </div>';
+    </div>
+  </div>';
 }
