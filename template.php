@@ -364,17 +364,19 @@ function bootstrap_form_element_label($variables) {
   $attributes = array();
   // Style the label as class option to display inline with the element.
   if ($element['#title_display'] == 'after') {
-    $attributes['class'] = 'option';
+    $attributes['class'][] = 'option';
   }
   // Show label only to screen readers to avoid disruption in visual flows.
   elseif ($element['#title_display'] == 'invisible') {
-    $attributes['class'] = 'element-invisible';
+    $attributes['class'][] = 'element-invisible';
   }
 
   if (!empty($element['#id'])) {
     $attributes['for'] = $element['#id'];
   }
+
   $attributes['class'][] = 'input-group-addon';
+
   // The leading whitespace helps visually separate fields from inline labels.
   return ' <span' . backdrop_attributes($attributes) . '>' . $t('!title !required', array('!title' => $title, '!required' => $required)) . "</span>\n";
 }
