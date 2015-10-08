@@ -104,7 +104,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     }
   }
   
-  // Advanced settings.
+  backdrop_add_css(backdrop_get_path('theme', 'bootstrap') . '/css/settings.css');
   $form['bootstrap_cdn'] = array(
     '#type' => 'fieldset',
     '#title' => t('BootstrapCDN settings'),
@@ -129,6 +129,9 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#default_value' => theme_get_setting('bootstrap_cdn', 'bootstrap'),
     '#empty_option' => t('Disabled'),
     '#empty_value' => NULL,
+    '#prefix' => '<div class="container section-preview">',
+    '#suffix' => '</div>',
+
   );
 
   $bootswatch_themes = array();
@@ -168,7 +171,7 @@ function bootstrap_bootswatch_template($bootswatch_theme){
     <div class="options">
       <h3>' . $bootswatch_theme['name'] . '</h3>
       <p>' . $bootswatch_theme['description'] . '</p>
-      <div class="btn-group"><a class="btn btn-info" href="' . $bootswatch_theme['preview'] . '">Preview</a></div>
+      <div class="btn-group"><a class="btn btn-info" href="' . $bootswatch_theme['preview'] . '" target="_blank">Preview</a></div>
     </div>
   </div>';
 }
