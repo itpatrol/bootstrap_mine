@@ -104,7 +104,7 @@ function bootstrap_preprocess_layout(&$variables) {
       backdrop_add_js('(function($){ $(".l-' . $region_name . '").addClass("' . $well . '");})(jQuery);', array('type' => 'inline', 'scope' => 'footer'));
     }
   }
-  backdrop_add_js('(function($){ $(".l-container").addClass("fill");})(jQuery);', array('type' => 'inline', 'scope' => 'footer'));
+  backdrop_add_js('(function($){ $(".layout").addClass("container");})(jQuery);', array('type' => 'inline', 'scope' => 'footer'));
   
 }
 
