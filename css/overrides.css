@@ -1,5 +1,5 @@
 body.navbar-is-fixed-bottom{
-  padding-bottom:64px!important
+  padding-bottom:64px!important;
 }
 
 body.navbar-is-fixed-top-padding{
@@ -7,7 +7,7 @@ body.navbar-is-fixed-top-padding{
 }
 
 body div#admin-bar{
-  z-index:1600
+  z-index:1600;
 }
 
 #navbar {
@@ -20,10 +20,14 @@ body div#admin-bar{
 
 @media screen and (min-width:768px){
   .navbar .logo{
-    margin-right:0;padding-left:0
+    margin-right:0;padding-left:0;
   }
 }
 
 .navbar .logo img{
   height: 32px;
+}
+
+ul li.collapsed,ul li.expanded,ul li.leaf{
+  list-style:none;list-style-image:none;
 }
