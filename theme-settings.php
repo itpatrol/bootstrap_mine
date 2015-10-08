@@ -132,7 +132,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
   );
 
   $bootswatch_themes = array();
-  $bootswatch_themes[''] = t('Default');
+  $bootswatch_themes[''] = bootstrap_bootswatch_template(array('name' => t('Default'), 'description' => t('Pure Bootstrap CSS')));
   $request = drupal_http_request('http://api.bootswatch.com/3/');
   if ($request && $request->code === '200' && !empty($request->data)) {
     if (($api = backdrop_json_decode($request->data)) && is_array($api) && !empty($api['themes'])) {
@@ -163,14 +163,20 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
 }
 
 function bootstrap_bootswatch_template($bootswatch_theme){
-  return '<div class="preview">
-    <div class="image">
+  $output = '<div class="preview">';
+  
+  if(isset($bootswatch_theme['thumbnail'])){
+    $output .= '<div class="image">
       <img src="' . $bootswatch_theme['thumbnail']. '" class="img-responsive" alt="' . $bootswatch_theme['name'] . '">
-    </div>
-    <div class="options">
+    </div>';
+  }
+  $output .= '<div class="options">
       <h3>' . $bootswatch_theme['name'] . '</h3>
-      <p>' . $bootswatch_theme['description'] . '</p>
-      <div class="btn-group"><a class="btn btn-info" href="' . $bootswatch_theme['preview'] . '" target="_blank">Preview</a></div>
-    </div>
+      <p>' . $bootswatch_theme['description'] . '</p>';
+  if(isset($bootswatch_theme['preview'])){
+    $output .= '<div class="btn-group"><a class="btn btn-info" href="' . $bootswatch_theme['preview'] . '" target="_blank">Preview</a></div>';
+  }
+  $output .= '</div>
   </div>';
+  return $output;
 }
