@@ -130,18 +130,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#empty_option' => t('Disabled'),
     '#empty_value' => NULL,
   );
-  
-  $form['bootstrap_cdn']['bootstrap_bootswatch'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('BootstrapCDN settings'),
-    '#description' => t('Use !bootstrapcdn to serve a Bootswatch Theme. Choose Bootswatch theme here.', array(
-      '!bootstrapcdn' => l(t('BootstrapCDN'), 'http://bootstrapcdn.com', array(
-        'external' => TRUE,
-      )),
-    )),
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
+
   $bootswatch_themes = array();
   $request = drupal_http_request('http://api.bootswatch.com/3/');
   if ($request && $request->code === '200' && !empty($request->data)) {
@@ -151,7 +140,8 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
       }
     }
   }  
-  
+    
+  $form['bootstrap_cdn']['bootstrap_bootswatch'] = array(
     '#type' => 'radios',
     '#title' => t('Bootswatch theme'),
     '#description' => t('Use !bootstrapcdn to serve a Bootswatch Theme. Choose Bootswatch theme here.', array(
@@ -163,12 +153,6 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#options' => $bootswatch_themes,
     '#empty_option' => t('Disabled'),
     '#empty_value' => NULL,
-    '#suffix' => '<div id="bootswatch-preview"></div>',
-    '#states' => array(
-      'invisible' => array(
-        ':input[name="bootstrap_cdn"]' => array('value' => ''),
-      ),
-    ),
   );
   if (empty($bootswatch_themes)) {
     $form['bootstrap_cdn']['bootstrap_bootswatch']['#prefix'] = '<div class="alert alert-danger messages error"><strong>' . t('ERROR') . ':</strong> ' . t('Unable to reach Bootswatch API. Please ensure the server your website is hosted on is able to initiate HTTP requests.') . '</div>';
