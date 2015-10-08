@@ -230,6 +230,7 @@ function bootstrap_fieldset($variables) {
  * @ingroup themeable
  */
 function bootstrap_button($variables) {
+  print_r($variables);
   foreach($variables['#attributes']['class'] as $key => $class){
     if(FALSE !== strpos($class, 'button')){
       $variables['#attributes']['class'][$key] = str_replace('button', 'btn', $class);
