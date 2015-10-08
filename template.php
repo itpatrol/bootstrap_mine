@@ -119,7 +119,7 @@ function bootstrap_preprocess_page(&$variables){
   $no_old_ie_compatibility_modes = array(
     '#tag' => 'meta',
     '#attributes' => array(
-      'name' => 'X-UA-Compatible',
+      'http-equiv' => 'X-UA-Compatible',
       'content' => 'IE=edge',
     ),
   );
