@@ -98,6 +98,19 @@ function bootstrap_css_alter(&$css) {
   }
 }
 
+/**
+ * Implements hook_js_alter().
+ */
+function bootstrap_js_alter(&$js) {
+  if (theme_get_setting('bootstrap_cdn')) {
+    $cdn = '//netdna.bootstrapcdn.com/bootstrap/' . theme_get_setting('bootstrap_cdn')  . '/js/bootstrap.min.js';
+    $js[$cdn] = drupal_js_defaults();
+    $js[$cdn]['data'] = $cdn;
+    $js[$cdn]['type'] = 'external';
+    $js[$cdn]['every_page'] = TRUE;
+    $js[$cdn]['weight'] = -100;
+  }
+}
 
 /**
  * Implements hook_preprocess_layout().
