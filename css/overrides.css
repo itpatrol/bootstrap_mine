@@ -9,3 +9,11 @@ body.navbar-is-fixed-top-padding{
 body div#admin-bar{
   z-index:1600
 }
+
+#navbar {
+  height: 50px;  
+}
+
+.navbar .logo img{
+  height: 32px;
+}
