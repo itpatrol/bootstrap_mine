@@ -182,3 +182,40 @@ function bootstrap_menu_tree__user_menu($variables){
   }
   return theme_menu_tree($variables);
 }
+
+
+/**
+ * Returns HTML for a fieldset form element and its children.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: An associative array containing the properties of the element.
+ *     Properties used: #attributes, #children, #collapsed, #collapsible,
+ *     #description, #id, #title, #value.
+ *
+ * @ingroup themeable
+ */
+function bootstrap_fieldset($variables) {
+  $element = $variables['element'];
+  element_set_attributes($element, array('id'));
+  _form_set_class($element, array('form-wrapper'));
+  $element['#attributes']['class'][] = 'panel';
+  $element['#attributes']['class'][] = 'panel-default';
+  $output = '<fieldset' . backdrop_attributes($element['#attributes']) . '>';
+  if (!empty($element['#title'])) {
+    // Always wrap fieldset legends in a SPAN for CSS positioning.
+    $output .= '<legend><span class="fieldset-legend panel-heading">' . $element['#title'] . '</span></legend>';
+  }
+  $output .= '<div class="fieldset-wrapper panel-body">';
+  if (!empty($element['#description'])) {
+    $output .= '<div class="fieldset-description">' . $element['#description'] . '</div>';
+  }
+  $output .= $element['#children'];
+  if (isset($element['#value'])) {
+    $output .= $element['#value'];
+  }
+  $output .= '</div>';
+  $output .= "</fieldset>\n";
+  return $output;
+}
+
