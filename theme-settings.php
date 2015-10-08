@@ -164,7 +164,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
 function bootstrap_bootswatch_template($bootswatch_theme){
   return '<div class="preview">
     <div class="image">
-      <a href="cerulean/"><img src="' . $bootswatch_theme['thumbnail']. '" class="img-responsive" alt="' . $bootswatch_theme['name'] . '"></a>
+      <img src="' . $bootswatch_theme['thumbnail']. '" class="img-responsive" alt="' . $bootswatch_theme['name'] . '">
     </div>
     <div class="options">
       <h3>' . $bootswatch_theme['name'] . '</h3>
