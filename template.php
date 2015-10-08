@@ -204,7 +204,7 @@ function bootstrap_fieldset($variables) {
   $output = '<fieldset' . backdrop_attributes($element['#attributes']) . '>';
   if (!empty($element['#title'])) {
     // Always wrap fieldset legends in a SPAN for CSS positioning.
-    $output .= '<legend><span class="fieldset-legend panel-heading">' . $element['#title'] . '</span></legend>';
+    $output .= '<legend class="panel-heading"><span class="fieldset-legend">' . $element['#title'] . '</span></legend>';
   }
   $output .= '<div class="fieldset-wrapper panel-body">';
   if (!empty($element['#description'])) {
