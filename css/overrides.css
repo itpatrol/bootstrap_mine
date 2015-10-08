@@ -31,3 +31,19 @@ body div#admin-bar{
 ul li.collapsed,ul li.expanded,ul li.leaf{
   list-style:none;list-style-image:none;
 }
+
+fieldset legend.panel-heading{
+  float:left;line-height:1em;margin:0
+}
+
+fieldset .panel-body{
+  clear:both
+}
+
+fieldset .panel-heading a.panel-title{
+  color:inherit;display:block;margin:-10px -15px;padding:10px 15px
+}
+
+fieldset .panel-heading a.panel-title:hover{
+  text-decoration:none
+}
