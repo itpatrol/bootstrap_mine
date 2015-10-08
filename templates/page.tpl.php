@@ -47,6 +47,7 @@
     <?php print backdrop_get_js(); ?>
   </head>
   <body class="<?php print implode(' ', $classes); ?>"<?php print backdrop_attributes($body_attributes); ?>>
+    <?php print $navbar; ?>
     <?php print $page; ?>
     <?php print $page_bottom; ?>
     <?php print backdrop_get_js('footer'); ?>

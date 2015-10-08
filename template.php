@@ -109,7 +109,7 @@ function bootstrap_preprocess_layout(&$variables) {
 }
 
 function bootstrap_preprocess_page(&$variables){
-
+  $variables['navbar'] = system_header_block($settings);
   $no_old_ie_compatibility_modes = array(
     '#tag' => 'meta',
     '#attributes' => array(
