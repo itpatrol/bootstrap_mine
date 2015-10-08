@@ -4,7 +4,7 @@
  */
 (function($, Backdrop, window, document, undefined) {
   $(document).ready(function() {
-    $("#navbar").detach().appendTo('body');
+    $("#navbar").detach().prependTo('body');
     $("#navbar").removeClass('navbar-fixed-top');
     $("#navbar").addClass('navbar-static-top');
 
