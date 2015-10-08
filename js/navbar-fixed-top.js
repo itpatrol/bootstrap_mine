@@ -12,9 +12,11 @@
       if (win.scrollTop() > 33) {
         $("#navbar").addClass('navbar-fixed-top');
         $("#navbar").removeClass('navbar-static-top');
+        $("body").addClass('navbar-is-fixed-top-padding');
       } else {
         $("#navbar").removeClass('navbar-fixed-top');
         $("#navbar").addClass('navbar-static-top');
+        $("body").removeClass('navbar-is-fixed-top-padding');
       }
     });
 
