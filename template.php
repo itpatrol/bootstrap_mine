@@ -254,3 +254,19 @@ function bootstrap_textfield($variables) {
   $variables['element']['#attributes']['class'][] = 'form-control';
   return theme_textfield($variables);
 }
+
+/**
+ * Returns HTML for a textarea form element.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: An associative array containing the properties of the element.
+ *     Properties used: #title, #value, #description, #rows, #cols,
+ *     #placeholder, #required, #attributes
+ *
+ * @ingroup themeable
+ */
+function bootstrap_textarea($variables) {
+  $variables['element']['#attributes']['class'][] = 'form-control';
+  return theme_textfield($variables);
+}
