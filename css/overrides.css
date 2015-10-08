@@ -32,6 +32,10 @@ ul li.collapsed,ul li.expanded,ul li.leaf{
   list-style:none;list-style-image:none;
 }
 
+html.js fieldset.collapsed{
+  height:auto;
+}
+
 fieldset legend.panel-heading{
   float:left;line-height:1em;margin:0;
 }
