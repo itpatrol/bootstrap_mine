@@ -131,18 +131,27 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#empty_value' => NULL,
   );
   
-  // Bootswatch.
+  $form['bootstrap_cdn']['bootstrap_bootswatch'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('BootstrapCDN settings'),
+    '#description' => t('Use !bootstrapcdn to serve a Bootswatch Theme. Choose Bootswatch theme here.', array(
+      '!bootstrapcdn' => l(t('BootstrapCDN'), 'http://bootstrapcdn.com', array(
+        'external' => TRUE,
+      )),
+    )),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
   $bootswatch_themes = array();
   $request = drupal_http_request('http://api.bootswatch.com/3/');
   if ($request && $request->code === '200' && !empty($request->data)) {
-    if (($api = drupal_json_decode($request->data)) && is_array($api) && !empty($api['themes'])) {
+    if (($api = backdrop_json_decode($request->data)) && is_array($api) && !empty($api['themes'])) {
       foreach ($api['themes'] as $bootswatch_theme) {
-        $bootswatch_themes[strtolower($bootswatch_theme['name'])] = $bootswatch_theme['name'] . '<img src="'.$bootswatch_theme['thumbnail'].'" class="img-thumbnail thumbnail" width=100>';
+        $bootswatch_themes[strtolower($bootswatch_theme['name'])] = bootstrap_bootswatch_template($bootswatch_theme);
       }
     }
-  }
+  }  
   
-  $form['bootstrap_cdn']['bootstrap_bootswatch'] = array(
     '#type' => 'radios',
     '#title' => t('Bootswatch theme'),
     '#description' => t('Use !bootstrapcdn to serve a Bootswatch Theme. Choose Bootswatch theme here.', array(
@@ -164,4 +173,18 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
   if (empty($bootswatch_themes)) {
     $form['bootstrap_cdn']['bootstrap_bootswatch']['#prefix'] = '<div class="alert alert-danger messages error"><strong>' . t('ERROR') . ':</strong> ' . t('Unable to reach Bootswatch API. Please ensure the server your website is hosted on is able to initiate HTTP requests.') . '</div>';
   }
+}
+
+function bootstrap_bootswatch_template($bootswatch_theme){
+  return '<div class="col-lg-4 col-sm-6">
+  <div class="preview">
+    <div class="image">
+      <a href="cerulean/"><img src="' . $bootswatch_theme['thumbnail']. '" class="img-responsive" alt="' . $bootswatch_theme['name'] . '"></a>
+    </div>
+    <div class="options">
+      <h3>' . $bootswatch_theme['name'] . '</h3>
+      <p>' . $bootswatch_theme['description'] . '</p>
+      <div class="btn-group"><a class="btn btn-info" href="' . $bootswatch_theme['preview'] . '">Preview</a></div>
+    </div>
+  </div>';
 }
