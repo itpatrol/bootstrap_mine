@@ -162,8 +162,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
 }
 
 function bootstrap_bootswatch_template($bootswatch_theme){
-  return '<div class="col-lg-4 col-sm-6">
-  <div class="preview">
+  return '<div class="preview">
     <div class="image">
       <a href="cerulean/"><img src="' . $bootswatch_theme['thumbnail']. '" class="img-responsive" alt="' . $bootswatch_theme['name'] . '"></a>
     </div>
@@ -171,6 +170,5 @@ function bootstrap_bootswatch_template($bootswatch_theme){
       <h3>' . $bootswatch_theme['name'] . '</h3>
       <p>' . $bootswatch_theme['description'] . '</p>
       <div class="btn-group"><a class="btn btn-info" href="' . $bootswatch_theme['preview'] . '" target="_blank">Preview</a></div>
-    </div>
-  </div>';
+    </div>';
 }
