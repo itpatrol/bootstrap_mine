@@ -129,9 +129,6 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#default_value' => theme_get_setting('bootstrap_cdn', 'bootstrap'),
     '#empty_option' => t('Disabled'),
     '#empty_value' => NULL,
-    '#prefix' => '<div class="container section-preview">',
-    '#suffix' => '</div>',
-
   );
 
   $bootswatch_themes = array();
@@ -156,6 +153,8 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#options' => $bootswatch_themes,
     '#empty_option' => t('Disabled'),
     '#empty_value' => NULL,
+    '#prefix' => '<div class="container section-preview">',
+    '#suffix' => '</div>',
   );
   if (empty($bootswatch_themes)) {
     $form['bootstrap_cdn']['bootstrap_bootswatch']['#prefix'] = '<div class="alert alert-danger messages error"><strong>' . t('ERROR') . ':</strong> ' . t('Unable to reach Bootswatch API. Please ensure the server your website is hosted on is able to initiate HTTP requests.') . '</div>';
