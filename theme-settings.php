@@ -105,25 +105,22 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
   }
   
   // Advanced settings.
-  $form['advanced'] = array(
+  $form['bootstrap_cdn'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Advanced'),
-    '#group' => 'bootstrap',
-  );
-  // BootstrapCDN.
-  $form['advanced']['bootstrap_cdn'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('BootstrapCDN'),
+    '#title' => t('BootstrapCDN settings'),
     '#description' => t('Use !bootstrapcdn to serve the Bootstrap framework files. Enabling this setting will prevent this theme from attempting to load any Bootstrap framework files locally. !warning', array(
       '!bootstrapcdn' => l(t('BootstrapCDN'), 'http://bootstrapcdn.com', array(
         'external' => TRUE,
       )),
-      '!warning' => '<div class="alert alert-info messages info"><strong>' . t('NOTE') . ':</strong> ' . t('While BootstrapCDN (content distribution network) is the preferred method for providing huge performance gains in load time, this method does depend on using this third party service. BootstrapCDN is under no obligation or commitment to provide guaranteed up-time or service quality for this theme. If you choose to disable this setting, you must provide your own Bootstrap source and/or optional CDN delivery implementation.') . '</div>',
+    '!warning' => '<div class="alert alert-info messages info"><strong>' . t('NOTE') . ':</strong> ' . t('While BootstrapCDN (content distribution network) is the preferred method for providing huge performance gains in load time, this method does depend on using this third party service. BootstrapCDN is under no obligation or commitment to provide guaranteed up-time or service quality for this theme. If you choose to disable this setting, you must provide your own Bootstrap source and/or optional CDN delivery implementation.') . '</div>',
     )),
+    '#group' => 'bootstrap',
     '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
+    '#collapsed' => TRUE,    
   );
-  $form['advanced']['bootstrap_cdn']['bootstrap_cdn'] = array(
+  // BootstrapCDN.
+
+  $form['bootstrap_cdn']['bootstrap_cdn'] = array(
     '#type' => 'select',
     '#title' => t('BootstrapCDN version'),
     '#options' => drupal_map_assoc(array(
@@ -133,6 +130,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#empty_option' => t('Disabled'),
     '#empty_value' => NULL,
   );
+  
   // Bootswatch.
   $bootswatch_themes = array();
   $request = drupal_http_request('http://api.bootswatch.com/3/');
@@ -143,7 +141,8 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
       }
     }
   }
-  $form['advanced']['bootstrap_cdn']['bootstrap_bootswatch'] = array(
+  
+  $form['bootstrap_cdn']['bootstrap_bootswatch'] = array(
     '#type' => 'radios',
     '#title' => t('Bootswatch theme'),
     '#description' => t('Use !bootstrapcdn to serve a Bootswatch Theme. Choose Bootswatch theme here.', array(
@@ -163,6 +162,6 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     ),
   );
   if (empty($bootswatch_themes)) {
-    $form['advanced']['bootstrap_cdn']['bootstrap_bootswatch']['#prefix'] = '<div class="alert alert-danger messages error"><strong>' . t('ERROR') . ':</strong> ' . t('Unable to reach Bootswatch API. Please ensure the server your website is hosted on is able to initiate HTTP requests.') . '</div>';
+    $form['bootstrap_cdn']['bootstrap_bootswatch']['#prefix'] = '<div class="alert alert-danger messages error"><strong>' . t('ERROR') . ':</strong> ' . t('Unable to reach Bootswatch API. Please ensure the server your website is hosted on is able to initiate HTTP requests.') . '</div>';
   }
 }
