@@ -19,11 +19,6 @@
  * - $menu: The menu for the header (if any), as an HTML string.
  */
 ?>
-<header role="banner" id="page-header">
-  <?php if (!empty($site_slogan)): ?>
-    <p class="lead"><?php print $site_slogan; ?></p>
-  <?php endif; ?>
-</header>
 <header id="navbar" role="banner" class="<?php print implode(" ",$navbar_classes_array); ?>">
   <div class="container">
     <div class="navbar-header">
@@ -55,3 +50,8 @@
     <?php endif; ?>
   </div>
 </header>
+<header role="banner" id="page-header">
+  <?php if (!empty($site_slogan)): ?>
+    <p class="lead"><?php print $site_slogan; ?></p>
+  <?php endif; ?>
+</header> <!-- /#page-header -->
