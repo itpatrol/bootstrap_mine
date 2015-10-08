@@ -18,38 +18,6 @@ body.navbar-is-fixed-bottom{
   padding-bottom:64px!important
 }
 
-body.toolbar{
-  padding-top:30px!important
-}
-
-body.toolbar .navbar-fixed-top{
-  top:30px
-}
-
-body.toolbar.navbar-is-fixed-top{
-  padding-top:94px!important
-}
-
-body.toolbar-drawer{
-  padding-top:64px!important
-}
-
-body.toolbar-drawer .navbar-fixed-top{
-  top:64px
-}
-
-body.toolbar-drawer.navbar-is-fixed-top{
-  padding-top:128px!important
-}
-
-body.admin-menu .navbar-fixed-top{
-  top:29px
-}
-
-body.admin-menu.navbar-is-fixed-top{
-  padding-top:93px!important
-}
-
 body div#admin-bar{
   z-index:1600
 }
