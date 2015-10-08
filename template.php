@@ -219,3 +219,22 @@ function bootstrap_fieldset($variables) {
   return $output;
 }
 
+/**
+ * Returns HTML for a button form element.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: An associative array containing the properties of the element.
+ *     Properties used: #attributes, #button_type, #name, #value.
+ *
+ * @ingroup themeable
+ */
+function bootstrap_button($variables) {
+  foreach($variables['#attributes']['class'] as $key => $class){
+    if(FALSE !== strpos($class, 'button')){
+      $variables['#attributes']['class'][$key] = str_replace('button', 'btn', $class);
+    }
+  }
+  $variables['#attributes']['class'][] = 'btn';
+  return theme_button($variables);
+}
