@@ -267,6 +267,7 @@ function bootstrap_textfield($variables) {
  * @ingroup themeable
  */
 function bootstrap_textarea($variables) {
-  $variables['element']['#attributes']['class'][] = 'form-control';
+  print_r($variables);
+//  $variables['element']['#attributes']['class'][] = 'form-control';
   return theme_textfield($variables);
 }
