@@ -269,5 +269,5 @@ function bootstrap_textfield($variables) {
 function bootstrap_textarea($variables) {
   print_r($variables);
 //  $variables['element']['#attributes']['class'][] = 'form-control';
-  return theme_textfield($variables);
+  return theme_textarea($variables);
 }
