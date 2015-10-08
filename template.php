@@ -238,3 +238,19 @@ function bootstrap_button($variables) {
   $variables['element']['#attributes']['class'][] = 'btn';
   return theme_button($variables);
 }
+
+/**
+ * Returns HTML for a textfield form element.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: An associative array containing the properties of the element.
+ *     Properties used: #title, #value, #description, #size, #maxlength,
+ *     #placeholder, #required, #attributes, #autocomplete_path.
+ *
+ * @ingroup themeable
+ */
+function bootstrap_textfield($variables) {
+  $variables['element']['#attributes']['class'][] = 'form-control';
+  return theme_textfield($variables);
+}
