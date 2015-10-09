@@ -264,6 +264,9 @@ function bootstrap_button($variables) {
  */
 function bootstrap_email($variables) {
   $variables['element']['#attributes']['class'][] = 'form-control';
+  if($variables['element']['#required']){
+    $variables['element']['#attributes']['placeholder'] = t('Required');
+  }
   return theme_email($variables);
 }
 
@@ -280,6 +283,9 @@ function bootstrap_email($variables) {
  */
 function bootstrap_textfield($variables) {
   $variables['element']['#attributes']['class'][] = 'form-control';
+  if($variables['element']['#required']){
+    $variables['element']['#attributes']['placeholder'] = t('Required');
+  }
   return theme_textfield($variables);
 }
 
@@ -296,6 +302,9 @@ function bootstrap_textfield($variables) {
  */
 function bootstrap_textarea($variables) {
   $variables['element']['#attributes']['class'][] = 'form-control';
+  if($variables['element']['#required']){
+    $variables['element']['#attributes']['placeholder'] = t('Required');
+  }
   return theme_textarea($variables);
 }
 
@@ -439,5 +448,8 @@ function bootstrap_form_required_marker($variables) {
  */
 function bootstrap_password($variables) {
   $variables['element']['#attributes']['class'][] = 'form-control';
+  if($variables['element']['#required']){
+    $variables['element']['#attributes']['placeholder'] = t('Required');
+  }
   return theme_password($variables);
 }
