@@ -63,12 +63,9 @@ fieldset .panel-heading a.panel-title:hover{
   border-bottom-right-radius: 0;
 }
 
-.required .fa-asterisk {
-  color: red;
-}
 
-span.input-group-addon.required.asterisk {
-  width: 10px;
-  min-width: 10px;
-  font-size: 10px;
-}
+.form-control.required::-webkit-input-placeholder { color: #d44950; }
+.form-control.required:-moz-placeholder { color: #d44950; }
+.form-control.required::-moz-placeholder { color: #d44950; }
+.form-control.required:-ms-input-placeholder { color: #d44950; }
+
