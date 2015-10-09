@@ -56,6 +56,10 @@ fieldset .panel-heading a.panel-title:hover{
   min-width: 100px;
 }
 
+.contact-site-form span.input-group-addon {
+  min-width: 150px;
+}
+
 .input-group textarea {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
