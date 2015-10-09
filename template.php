@@ -413,3 +413,19 @@ function bootstrap_form_element_label($variables) {
 function bootstrap_form_required_marker($variables) {
   return '';
 }
+
+/**
+ * Returns HTML for a password form element.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: An associative array containing the properties of the element.
+ *     Properties used: #title, #value, #description, #size, #maxlength,
+ *     #placeholder, #required, #attributes.
+ *
+ * @ingroup themeable
+ */
+function bootstrap_password($variables) {
+  $variables['element']['#attributes']['class'][] = 'form-control';
+  return theme_password($variables);
+}
