@@ -264,7 +264,7 @@ function bootstrap_button($variables) {
  */
 function bootstrap_email($variables) {
   $variables['element']['#attributes']['class'][] = 'form-control';
-  return theme_email($variables);
+  return theme_email($variables) . bootstrap_asterisk_display($variables['element']['#required']);
 }
 
 /**
@@ -280,13 +280,15 @@ function bootstrap_email($variables) {
  */
 function bootstrap_textfield($variables) {
   $variables['element']['#attributes']['class'][] = 'form-control';
-  $required = '';
-  if($variables['element']['#required']){
-    $required = '<span class="input-group-addon required asterisk"><i class="fa fa-asterisk"></i></span>';
-  }
-  return theme_textfield($variables) . $required;
+  return theme_textfield($variables) . bootstrap_asterisk_display($variables['element']['#required']);
 }
 
+function bootstrap_asterisk_display($display){
+  if($display){
+    return '<span class="input-group-addon required asterisk"><i class="fa fa-asterisk"></i></span>';
+  }
+  return '';
+}
 /**
  * Returns HTML for a textarea form element.
  *
@@ -300,7 +302,7 @@ function bootstrap_textfield($variables) {
  */
 function bootstrap_textarea($variables) {
   $variables['element']['#attributes']['class'][] = 'form-control';
-  return theme_textarea($variables);
+  return theme_textarea($variables) . bootstrap_asterisk_display($variables['element']['#required']);
 }
 
 /**
@@ -443,5 +445,5 @@ function bootstrap_form_required_marker($variables) {
  */
 function bootstrap_password($variables) {
   $variables['element']['#attributes']['class'][] = 'form-control';
-  return theme_password($variables);
+  return theme_password($variables) . bootstrap_asterisk_display($variables['element']['#required']);
 }

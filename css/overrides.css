@@ -53,8 +53,7 @@ fieldset .panel-heading a.panel-title:hover{
 }
 
 .input-group span.input-group-addon {
-  min-width: 150px;
-  min-width: 20%;
+  min-width: 25%;
 }
 
 .input-group textarea {
