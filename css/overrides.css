@@ -64,8 +64,8 @@ fieldset .panel-heading a.panel-title:hover{
 }
 
 
-.form-control.required::-webkit-input-placeholder { color: rgba(223, 64, 72, 0.5); }
-.form-control.required:-moz-placeholder { color: rgba(223, 64, 72, 0.5); }
-.form-control.required::-moz-placeholder { color: rgba(223, 64, 72, 0.5); }
-.form-control.required:-ms-input-placeholder { color: rgba(223, 64, 72, 0.5); }
+.form-control.required::-webkit-input-placeholder { color: rgba(255, 0, 14, 0.68); }
+.form-control.required:-moz-placeholder { color: rgba(255, 0, 14, 0.68); }
+.form-control.required::-moz-placeholder { color: rgba(255, 0, 14, 0.68); }
+.form-control.required:-ms-input-placeholder { color: rgba(255, 0, 14, 0.68); }
 
