@@ -448,6 +448,7 @@ function bootstrap_password($variables) {
 
 
 function bootstrap_display_placeholder(&$element){
+  print_r($element);
   if($element['#required'] && !$element['#error']){
     $element['#attributes']['placeholder'] = t('Required');
   }
