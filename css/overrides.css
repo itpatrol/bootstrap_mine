@@ -76,3 +76,7 @@ fieldset .panel-heading a.panel-title:hover{
 .form-item input.error, .form-item textarea.error, .form-item select.error {
   border: 1px solid red;
 }
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+  margin-left: 0px;
+}
