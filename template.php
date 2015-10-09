@@ -393,6 +393,10 @@ function bootstrap_form_element_label($variables) {
   }
 
   $attributes['class'][] = 'input-group-addon';
+  
+  if($element['#required']){
+    $attributes['class'][] = 'required';  
+  }
 
   // The leading whitespace helps visually separate fields from inline labels.
   return ' <span' . backdrop_attributes($attributes) . '>' . $t('!title !required', array('!title' => $title, '!required' => $required)) . "</span>\n";
