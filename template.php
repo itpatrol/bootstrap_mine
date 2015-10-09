@@ -240,6 +240,22 @@ function bootstrap_button($variables) {
 }
 
 /**
+ * Returns HTML for an email form element.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: An associative array containing the properties of the element.
+ *     Properties used: #title, #value, #description, #size, #maxlength,
+ *     #placeholder, #required, #attributes, #autocomplete_path.
+ *
+ * @ingroup themeable
+ */
+function bootstrap_email($variables) {
+  $variables['element']['#attributes']['class'][] = 'form-control';
+  return theme_email($variables);
+}
+
+/**
  * Returns HTML for a textfield form element.
  *
  * @param $variables
