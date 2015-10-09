@@ -334,7 +334,6 @@ function bootstrap_textarea($variables) {
  * @ingroup themeable
  */
 function bootstrap_form_element($variables){
-  print_r($variables);
   $variables['element']['#wrapper_attributes']['class'][] = 'input-group';
   return theme_form_element($variables);
 }
@@ -364,6 +363,7 @@ function bootstrap_form_element($variables){
  */
 
 function bootstrap_form_element_label($variables) {
+  print_r($variables);
   $element = $variables['element'];
   // This is also used in the installer, pre-database setup.
   $t = get_t();
