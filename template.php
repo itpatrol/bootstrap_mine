@@ -363,7 +363,6 @@ function bootstrap_form_element($variables){
  */
 
 function bootstrap_form_element_label($variables) {
-  print_r($variables);
   $element = $variables['element'];
   // This is also used in the installer, pre-database setup.
   $t = get_t();
