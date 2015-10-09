@@ -349,6 +349,8 @@ function bootstrap_textarea($variables) {
  * @ingroup themeable
  */
 function bootstrap_form_element($variables){
+  print_r($variables);
+//  $variables['element']['#wrapper_attributes']['class'][] = 'input-group';
   
   $description = FALSE;
   if(isset($variables['element']['#description'])){
