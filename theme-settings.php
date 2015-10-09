@@ -130,6 +130,17 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#empty_option' => t('Disabled'),
     '#empty_value' => NULL,
   );
+  
+  $form['bootstrap_cdn']['bootstrap_font_awesome'] = array(
+    '#type' => 'select',
+    '#title' => t('Font Awesome version'),
+    '#options' => drupal_map_assoc(array(
+      '4.4.0',
+    )),
+    '#default_value' => theme_get_setting('bootstrap_font_awesome', 'bootstrap'),
+    '#empty_option' => t('Disabled'),
+    '#empty_value' => NULL,
+  );
 
   $bootswatch_themes = array();
   $bootswatch_themes[''] = bootstrap_bootswatch_template(array('name' => t('Default'), 'description' => t('Pure Bootstrap CSS')));

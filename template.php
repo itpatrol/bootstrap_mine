@@ -43,12 +43,10 @@ function bootstrap_theme(&$existing, $type, $theme, $path) {
 function bootstrap_css_alter(&$css) {
   $theme_path = drupal_get_path('theme', 'bootstrap');
 
-  // Add Bootstrap CDN file and overrides.
-  $bootstrap_cdn = theme_get_setting('bootstrap_cdn');
-  if ($bootstrap_cdn) {
+  if ($bootstrap_cdn = theme_get_setting('bootstrap_cdn')) {
     // Add CDN.
-    if (theme_get_setting('bootstrap_bootswatch')) {
-      $cdn = '//netdna.bootstrapcdn.com/bootswatch/' . $bootstrap_cdn  . '/' . theme_get_setting('bootstrap_bootswatch') . '/bootstrap.min.css';
+    if ($bootswatch = theme_get_setting('bootstrap_bootswatch')) {
+      $cdn = '//netdna.bootstrapcdn.com/bootswatch/' . $bootstrap_cdn  . '/' . $bootswatch . '/bootstrap.min.css';
     }
     else {
       $cdn = '//netdna.bootstrapcdn.com/bootstrap/' . $bootstrap_cdn  . '/css/bootstrap.min.css';
@@ -76,6 +74,20 @@ function bootstrap_css_alter(&$css) {
       'weight' => -1,
     );
   }
+  if ($font_awesome = theme_get_setting('bootstrap_font_awesome')) {
+    $awesome = 'https://maxcdn.bootstrapcdn.com/font-awesome/' . $font_awesome . '/css/font-awesome.min.css';
+    $css[$awesome] = array(
+      'data' => $awesome,
+      'type' => 'external',
+      'every_page' => TRUE,
+      'media' => 'all',
+      'preprocess' => FALSE,
+      'group' => CSS_THEME,
+      'browsers' => array('IE' => TRUE, '!IE' => TRUE),
+      'weight' => -2,
+    );
+  }
+
 }
 
 /**
