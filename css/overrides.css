@@ -57,3 +57,7 @@ fieldset .panel-heading a.panel-title:hover{
   background-color: #d9534f;
   border-color: #d43f3a
 }
+
+.input-group span.input-group-addon {
+  min-width: 150px;
+}
