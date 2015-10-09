@@ -282,7 +282,7 @@ function bootstrap_textfield($variables) {
   $variables['element']['#attributes']['class'][] = 'form-control';
   $required = '';
   if($variables['element']['#required']){
-    $required = '<span class="input-group-addon required"><i class="fa fa-asterisk"></i></span>';
+    $required = '<span class="input-group-addon required asterisk"><i class="fa fa-asterisk"></i></span>';
   }
   return theme_textfield($variables) . $required;
 }
@@ -427,7 +427,7 @@ function bootstrap_form_element_label($variables) {
  * @ingroup themeable
  */
 function bootstrap_form_required_marker($variables) {
-  return '<i class="fa fa-asterisk"></i>';
+  return '';
 }
 
 /**
