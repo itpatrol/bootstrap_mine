@@ -51,3 +51,9 @@ fieldset .panel-heading a.panel-title{
 fieldset .panel-heading a.panel-title:hover{
   text-decoration:none;
 }
+
+.input-group span.required {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a
+}
