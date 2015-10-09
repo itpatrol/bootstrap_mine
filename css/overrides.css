@@ -66,3 +66,8 @@ fieldset .panel-heading a.panel-title:hover{
 .required .fa-asterisk {
   color: red;
 }
+
+span.input-group-addon.required {
+  width: 10px;
+  font-size: 10px;
+}
