@@ -73,3 +73,6 @@ fieldset .panel-heading a.panel-title:hover{
 .form-control.required::-moz-placeholder { color: rgba(255, 0, 14, 0.68); }
 .form-control.required:-ms-input-placeholder { color: rgba(255, 0, 14, 0.68); }
 
+.form-item input.error, .form-item textarea.error, .form-item select.error {
+  border: 1px solid red;
+}
