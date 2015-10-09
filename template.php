@@ -401,3 +401,16 @@ function bootstrap_form_element_label($variables) {
   // The leading whitespace helps visually separate fields from inline labels.
   return ' <span' . backdrop_attributes($attributes) . '>' . $t('!title !required', array('!title' => $title, '!required' => $required)) . "</span>\n";
 }
+
+/**
+ * Returns HTML for a marker for required form elements.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: An associative array containing the properties of the element.
+ *
+ * @ingroup themeable
+ */
+function bootstrap_form_required_marker($variables) {
+  return '';
+}
