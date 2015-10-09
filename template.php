@@ -358,7 +358,7 @@ function bootstrap_form_element($variables){
   }
   $output = theme_form_element($variables);
   if($description){
-    $output .= '<div class="description help-block">' . $element['#description'] . "</div>\n";
+    $output .= '<div class="description help-block">' . $description . "</div>\n";
   }
 }
 
