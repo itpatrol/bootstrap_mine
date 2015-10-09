@@ -319,6 +319,7 @@ function bootstrap_textarea($variables) {
  */
 function bootstrap_form_element($variables){
   print_r($variables);
+  $variables['element']['#attributes']['class'][] = 'input-group';
   return theme_form_element($variables);
 }
 
