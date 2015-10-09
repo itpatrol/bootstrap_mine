@@ -360,6 +360,7 @@ function bootstrap_form_element($variables){
   if($description){
     $output .= '<div class="description help-block">' . $description . "</div>\n";
   }
+  return $output;
 }
 
 /**
