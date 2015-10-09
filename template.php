@@ -280,9 +280,8 @@ function bootstrap_email($variables) {
  */
 function bootstrap_textfield($variables) {
   $variables['element']['#attributes']['class'][] = 'form-control';
-  print_r($variables);
   $required = '';
-  if($variables['element']['required']){
+  if($variables['element']['#required']){
     $required = '<span class="input-group-addon required"><i class="fa fa-asterisk"></i></span>';
   }
   return theme_textfield($variables) . $required;
