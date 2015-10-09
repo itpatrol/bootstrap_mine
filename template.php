@@ -423,7 +423,7 @@ function bootstrap_form_element_label($variables) {
  * @ingroup themeable
  */
 function bootstrap_form_required_marker($variables) {
-  return '';
+  return '<i class="fa fa-asterisk"></i>';
 }
 
 /**

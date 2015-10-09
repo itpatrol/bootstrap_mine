@@ -62,3 +62,7 @@ fieldset .panel-heading a.panel-title:hover{
   border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
 }
+
+.required fa-asterisk {
+  color: red;
+}
