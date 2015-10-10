@@ -244,8 +244,8 @@ function bootstrap_fieldset($variables) {
 function bootstrap_button($variables) {
   if(isset($variables['element']['#attributes']['class'])){
     foreach($variables['element']['#attributes']['class'] as $key => $class){
-      if('button-secondary' == $class){
-        $variables['element']['#attributes']['class'][$key] = 'btn-default';
+      if(FALSE !== strpos($class, 'secondary')){
+        $class = $variables['element']['#attributes']['class'][$key] = str_replace('secondary', 'default', $class);
       }
       if(FALSE !== strpos($class, 'button')){
         $variables['element']['#attributes']['class'][$key] = str_replace('button', 'btn', $class);
