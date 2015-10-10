@@ -84,3 +84,7 @@ fieldset .panel-heading a.panel-title:hover{
 th.checkbox,td.checkbox,th.radio,td.radio{
   display:table-cell;
 }
+
+tr.even {
+  background-color: none;
+}
