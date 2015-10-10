@@ -388,6 +388,7 @@ function bootstrap_password($variables) {
  */
 function bootstrap_preprocess_table(&$variables) {
   $variables['attributes']['class'][] = 'table';
+  $variables['attributes']['class'][] = 'table-hover';
   if (!in_array('table-no-striping', $variables['attributes']['class'])) {
     $variables['attributes']['class'][] = 'table-striped';
   }
