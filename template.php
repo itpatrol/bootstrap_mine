@@ -393,3 +393,30 @@ function bootstrap_preprocess_table(&$variables) {
     $variables['attributes']['class'][] = 'table-striped';
   }
 }
+
+/**
+ * Returns HTML for an individual permission description.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - permission_item: An associative array representing the permission whose
+ *     description is being themed. Useful keys include:
+ *     - description: The text of the permission description.
+ *     - warning: A security-related warning message about the permission (if
+ *       there is one).
+ *
+ * @ingroup themeable
+ */
+function bootstrap_user_permission_description($variables) {
+  $description = array();
+  $permission_item = $variables['permission_item'];
+  if (!empty($permission_item['description'])) {
+    $description[] = $permission_item['description'];
+  }
+  if (!empty($permission_item['warning'])) {
+    $description[] = '<em class="permission-warning text-danger">' . $permission_item['warning'] . '</em>';
+  }
+  if (!empty($description)) {
+    return implode(' ', $description);
+  }
+}
