@@ -501,7 +501,7 @@ function bootstrap_system_admin_index($variables) {
 
   $output = '<div class="admin clearfix">';
   foreach ($container as $id => $data) {
-    $output .= '<div class="' . $id . ' col-md-6 col-sm-12 clearfix">';
+    $output .= '<div class=" col-md-6 col-sm-12 clearfix">';
     $output .= $data;
     $output .= '</div>';
   }
@@ -544,7 +544,7 @@ function bootstrap_admin_page($variables) {
   $output = '<div class="admin clearfix">';
 
   foreach ($container as $id => $data) {
-    $output .= '<div class="' . $id . ' clearfix  col-md-6 col-sm-12 ">';
+    $output .= '<div class="clearfix  col-md-6 col-sm-12 ">';
     $output .= $data;
     $output .= '</div>';
   }
