@@ -382,3 +382,13 @@ function bootstrap_password($variables) {
   $variables['element']['#attributes']['class'][] = 'form-control';
   return theme_password($variables);
 }
+
+/**
+ * Implements hook_preprocess_table().
+ */
+function bootstrap_preprocess_table(&$variables) {
+  $variables['attributes']['class'][] = 'table';
+  if (!in_array('table-no-striping', $variables['attributes']['class'])) {
+    $variables['attributes']['class'][] = 'table-striped';
+  }
+}
