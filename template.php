@@ -242,10 +242,14 @@ function bootstrap_fieldset($variables) {
  * @ingroup themeable
  */
 function bootstrap_button($variables) {
-  foreach($variables['element']['#attributes']['class'] as $key => $class){
-    if(FALSE !== strpos($class, 'button')){
-      $variables['element']['#attributes']['class'][$key] = str_replace('button', 'btn', $class);
+  if(isset($variables['element']['#attributes']['class'])){
+    foreach($variables['element']['#attributes']['class'] as $key => $class){
+      if(FALSE !== strpos($class, 'button')){
+        $variables['element']['#attributes']['class'][$key] = str_replace('button', 'btn', $class);
+      }
     }
+  } else{
+    $variables['element']['#attributes']['class'][] = 'btn-default';  
   }
   $variables['element']['#attributes']['class'][] = 'btn';
   return theme_button($variables);
