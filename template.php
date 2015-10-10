@@ -208,6 +208,7 @@ function bootstrap_menu_tree__user_menu($variables){
  * @ingroup themeable
  */
 function bootstrap_fieldset($variables) {
+  print_r($variables);
   $element = $variables['element'];
   element_set_attributes($element, array('id'));
   _form_set_class($element, array('form-wrapper'));
