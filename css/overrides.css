@@ -80,3 +80,7 @@ fieldset .panel-heading a.panel-title:hover{
 .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
   margin-left: 0px;
 }
+
+th.checkbox,td.checkbox,th.radio,td.radio{
+  display:table-cell;
+}
