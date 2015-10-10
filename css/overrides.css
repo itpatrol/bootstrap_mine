@@ -105,3 +105,25 @@ dl.admin-list {
 .admin-list dd {
   padding:5px 0px 15px 15px;
 }
+
+.vertical-tab-item {
+  background-color: #f7f7f9;
+}
+
+.vertical-tab-link {
+  color: black;
+}
+.vertical-tab-link span {
+  color: #555;
+}
+
+.vertical-tab-link:focus strong,
+.vertical-tab-link:active strong,
+.vertical-tab-link:hover strong,
+.vertical-tab-link:focus .fieldset-legend,
+.vertical-tab-link:active .fieldset-legend,
+.vertical-tab-link:hover .fieldset-legend {
+  text-decoration: none;
+  background-color: white;
+  outline: none;
+}
