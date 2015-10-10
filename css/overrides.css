@@ -81,6 +81,11 @@ fieldset .panel-heading a.panel-title:hover{
   margin-left: 0px;
 }
 
+.form-actions .btn {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
 th.checkbox,td.checkbox,th.radio,td.radio{
   display:table-cell;
 }
