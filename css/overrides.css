@@ -93,6 +93,10 @@ tr.even {
   padding: 8px;
 }
 
+dl.admin-list {
+  margin-bottom: 0px;
+}
+
 .admin-list dd {
-  padding:5px 5px 15px;
+  padding:5px 0px 15px 15px;
 }
