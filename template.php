@@ -368,19 +368,6 @@ function bootstrap_form_element($variables){
 }
 
 /**
- * Returns HTML for a marker for required form elements.
- *
- * @param $variables
- *   An associative array containing:
- *   - element: An associative array containing the properties of the element.
- *
- * @ingroup themeable
- */
-function bootstrap_form_required_marker($variables) {
-  return '';
-}
-
-/**
  * Returns HTML for a password form element.
  *
  * @param $variables
