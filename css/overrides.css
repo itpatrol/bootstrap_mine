@@ -124,6 +124,14 @@ dl.admin-list {
 .vertical-tab-link:active .fieldset-legend,
 .vertical-tab-link:hover .fieldset-legend {
   text-decoration: none;
-  background-color: white;
   outline: none;
+}
+.vertical-tab-item:focus,
+.vertical-tab-item:active,
+.vertical-tab-item:hover,
+.vertical-tab-item:focus,
+.vertical-tab-item:active,
+.vertical-tab-item:hover{
+  background-color: white;
+  border: none;
 }
