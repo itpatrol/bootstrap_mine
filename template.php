@@ -472,6 +472,7 @@ function bootstrap_admin_block($variables) {
  * @ingroup themeable
  */
 function bootstrap_admin_page($variables) {
+  print_r($variables);
   $blocks = $variables['blocks'];
 
   $stripe = 0;
