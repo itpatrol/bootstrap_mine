@@ -92,3 +92,11 @@ tr.even {
 .sticky-header th {
   padding: 8px;
 }
+
+.admin-list dt, .admin-list dd {
+  padding: 5px;
+}
+
+.admin-list dd {
+  padding-bottom: 15px;
+}
