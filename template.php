@@ -444,7 +444,7 @@ function bootstrap_admin_block($variables) {
     return $output;
   }
 
-  $output .= '<div class="admin-panel panel panel-default">';
+  $output .= '<div class="panel panel-default">';
   if (!empty($block['title'])) {
     $output .= '<div class="panel-heading">' . $block['title'] . '</div>';
   }
