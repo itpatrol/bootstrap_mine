@@ -662,6 +662,6 @@ function bootstrap_breadcrumb($variables) {
  * Display a view as a table style.
  */
 function bootstrap_preprocess_views_view_table(&$variables) {
-  template_preprocess_views_view_table(&$variables);
+  template_preprocess_views_view_table($variables);
   $variables['classes'][] = 'table';
 }
