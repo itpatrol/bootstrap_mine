@@ -208,8 +208,8 @@ function bootstrap_menu_tree__user_menu($variables){
  * @ingroup themeable
  */
 function bootstrap_fieldset($variables) {
-  print_r($variables);
-  if(isset($variables['element']['#groups']) && !empty($variables['element']['#groups'])){
+//  print_r($variables);
+  if(isset($variables['element']['#group_fieldset']) && !empty($variables['element']['#group_fieldset'])){
     return theme_fieldset($variables);
   }
   $element = $variables['element'];
