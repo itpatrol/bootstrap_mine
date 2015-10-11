@@ -408,7 +408,7 @@ function bootstrap_password($variables) {
  */
 function bootstrap_search($variables) {
 
-  if($variables['element']['#attributes']['placeholder'] == t('Menu search')){
+  if(isset($variables['element']['#attributes']['placeholder']) && $variables['element']['#attributes']['placeholder'] == t('Menu search')){
     return theme_search($variables);  
   }
   
