@@ -39,14 +39,12 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#title' => t('Show "Home" breadcrumb link'),
     '#default_value' => theme_get_setting('bootstrap_breadcrumb_home', 'bootstrap'),
     '#description' => t('If your site has a module dedicated to handling breadcrumbs already, ensure this setting is enabled.'),
-    ),
   );
   $form['breadcrumbs']['bootstrap_breadcrumb_title'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show current page title at end'),
     '#default_value' => theme_get_setting('bootstrap_breadcrumb_title', 'bootstrap'),
     '#description' => t('If your site has a module dedicated to handling breadcrumbs already, ensure this setting is disabled.'),
-    ),
   );
 
   $form['navbar'] = array(
