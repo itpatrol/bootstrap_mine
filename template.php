@@ -706,6 +706,7 @@ function bootstrap_preprocess_breadcrumb(&$variables) {
   }
   if (theme_get_setting('bootstrap_breadcrumb_title') && !empty($breadcrumb)) {
     $item = menu_get_item();
+    print_r($item);
     $breadcrumb[] = empty($item['tab_parent']) ? check_plain($item['title']) : drupal_get_title();
   }
 }
