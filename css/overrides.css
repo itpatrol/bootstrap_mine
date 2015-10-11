@@ -140,3 +140,7 @@ ul.nav.nav-tabs.tabs.primary {
   line-height: inherit;
   margin: 0px;
 }
+
+ul.nav.nav-tabs>li {
+  margin-bottom: -2px;  
+}
