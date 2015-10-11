@@ -172,7 +172,7 @@ a.fieldset-title:hover {
   content: "\e252";
   font-family: 'Glyphicons Halflings';
   font-style: normal;
-  font-size: 10px;
+  font-size: 13px;
   padding-right: 10px;
 }
 
@@ -185,6 +185,6 @@ a.fieldset-title:hover {
   content: "\e250";
   font-family: 'Glyphicons Halflings';
   font-style: normal;
-  font-size: 10px;
+  font-size: 13px;
   padding-right: 10px;
 }
