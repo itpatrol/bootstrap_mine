@@ -734,10 +734,15 @@ function bootstrap_preprocess_views_view_table(&$variables) {
  */
 function bootstrap_form_alter(array &$form, array &$form_state = array(), $form_id = NULL) {
   if ($form_id) {
-    print_r($form);
+//    print_r($form);
     if(isset($form['actions']['cancel']) && $form['actions']['cancel']['#type'] == 'link'){
        $form['actions']['cancel']['#options']['attributes']['class'][] = 'btn';
        $form['actions']['cancel']['#options']['attributes']['class'][] = 'btn-default';
     }
+    if(isset($form['actions']['cancel_form']) && $form['actions']['cancel_form']['#type'] == 'link'){
+       $form['actions']['cancel']['#options']['attributes']['class'][] = 'btn';
+       $form['actions']['cancel']['#options']['attributes']['class'][] = 'btn-default';
+    }
+
   }
 }
