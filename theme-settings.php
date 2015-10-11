@@ -69,7 +69,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
   $form['navbar'] = array(
     '#type' => 'fieldset',
     '#title' => t('Navbar'),
-    '#description' => t('Navigation bar settings.')
+    '#description' => t('Navigation bar settings.'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
     '#group' => 'bootstrap',
