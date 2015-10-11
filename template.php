@@ -654,7 +654,6 @@ function bootstrap_menu_local_actions(&$variables) {
           $variables['actions'][$key]['#link']['localized_options']['html'] = TRUE;
     }
   }
-  print_r($variables['actions']);
   
   $output = backdrop_render($variables['actions']);
   if ($output) {
