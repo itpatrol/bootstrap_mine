@@ -406,7 +406,11 @@ function bootstrap_password($variables) {
  * @ingroup themeable
  */
 function bootstrap_search($variables) {
-  print_r($variables);
+
+  if($variables['element']['#attributes']['placeholder'] == t('Menu search')){
+    return theme_search($variables);  
+  }
+  
   $variables['element']['#attributes']['class'][] = 'form-control';
   return theme_search($variables);
 }
