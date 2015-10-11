@@ -157,24 +157,34 @@ ul.action-links i.fa {
   padding-right: 10px;
 }
 
+a.fieldset-title,
+a.fieldset-title:focus,
+a.fieldset-title:hover {
+  text-decoration: none;
+}
+
 .js fieldset.collapsible .fieldset-title {
   background: none;
+  padding-left: 0px;
 }
 
 .js fieldset.collapsible .fieldset-title:before {
-  content: "\2b";
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-size: 10px;
-}
-
-.js fieldset.collapsed .fieldset-title {
-  background: none; 
-}
-
-.js fieldset.collapsed .fieldset-title:before {
   content: "\2212";
   font-family: 'Glyphicons Halflings';
   font-style: normal;
   font-size: 10px;
+  padding-right: 10px;
+}
+
+.js fieldset.collapsed .fieldset-title {
+  background: none;
+  padding-left: 0px;
+}
+
+.js fieldset.collapsed .fieldset-title:before {
+  content: "\2b";
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-size: 10px;
+  padding-right: 10px;
 }
