@@ -628,3 +628,12 @@ function bootstrap_menu_local_tasks(&$variables) {
 
   return $output;
 }
+
+function bootstrap_links__dropbutton($menu){
+/*  $menu['attributes']['class'] = array('menu','nav','navbar-nav');
+  if($navbar_menu_position = theme_get_setting('bootstrap_navbar_menu_position')){
+    $menu['attributes']['class'][] = $navbar_menu_position;
+  }*/
+  return theme_links__dropbutton($menu);
+}
+
