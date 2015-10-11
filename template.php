@@ -642,6 +642,13 @@ function bootstrap_links__dropbutton($menu){
  */
 function bootstrap_menu_local_actions(&$variables) {
   print_r($variables['actions']);
+  foreach($variables['actions'] as $key => $link){
+    switch($link['#link']['path']){
+      case 'admin/people/create':
+          $variables['actions'][$key]['#link']['title'] =  '<i class="fa fa-user-plus"></i>' . $link['#link']['title'];
+        break;
+    }
+  }
   $output = backdrop_render($variables['actions']);
   if ($output) {
     $output = '<ul class="nav nav-pills action-links">' . $output . '</ul>';
