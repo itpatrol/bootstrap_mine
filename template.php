@@ -657,3 +657,10 @@ function bootstrap_breadcrumb($variables) {
   }
   return $output;
 }
+
+/**
+ * Display a view as a table style.
+ */
+function bootstrap_view_table(&$variables) {
+  print_r($variables);
+}
