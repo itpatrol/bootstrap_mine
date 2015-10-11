@@ -615,13 +615,13 @@ function bootstrap_menu_local_tasks(&$variables) {
 
   if (!empty($variables['primary'])) {
     $variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
-    $variables['primary']['#prefix'] .= '<ul class="nav nav-tabs tabs primary">';
+    $variables['primary']['#prefix'] .= '<ul class="nav nav-tabs tabs-primary">';
     $variables['primary']['#suffix'] = '</ul>';
     $output .= backdrop_render($variables['primary']);
   }
   if (!empty($variables['secondary'])) {
     $variables['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
-    $variables['secondary']['#prefix'] .= '<ul class="nav nav-tabs tabs secondary">';
+    $variables['secondary']['#prefix'] .= '<ul class="nav nav-tabs tabs-secondary">';
     $variables['secondary']['#suffix'] = '</ul>';
     $output .= backdrop_render($variables['secondary']);
   }
