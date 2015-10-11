@@ -82,7 +82,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     'well well-sm' => t('.well-sm (small)'),
     'well well-lg' => t('.well-lg (large)'),
   );
-  $form['components']['region_wells'] = array(
+  $form['region_wells'] = array(
     '#type' => 'fieldset',
     '#title' => t('Region wells'),
     '#description' => t('Enable the <code>.well</code>, <code>.well-sm</code> or <code>.well-lg</code> classes for specified regions. See: documentation on !wells.', array(
@@ -90,10 +90,11 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     )),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
+    '#group' => 'bootstrap',
   );
   
   foreach ($layouts as $layout_name => $layout) {
-    $form['components']['region_wells'][$layout_name]  = array(
+    $form['region_wells'][$layout_name]  = array(
       '#type' => 'fieldset',
       '#title' => t('!layout_title region wells', array('!layout_title' => $layout['title'])),
       '#collapsible' => TRUE,
@@ -102,7 +103,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     
     foreach($layout['regions'] as $region_name => $region_title ){
       $variable_name = 'bootstrap_well_' . $layout_name . '_' . $region_name;
-      $form['components']['region_wells'][$layout_name][$variable_name] = array(
+      $form['region_wells'][$layout_name][$variable_name] = array(
         '#title' => $region_title,
         '#type' => 'select',
         '#attributes' => array(
