@@ -728,3 +728,12 @@ function bootstrap_preprocess_views_view_table(&$variables) {
 //  template_preprocess_views_view_table($variables);
   $variables['classes'][] = 'table';
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function bootstrap_form_alter(array &$form, array &$form_state = array(), $form_id = NULL) {
+  if ($form_id) {
+    print_r($form);
+  }
+}
