@@ -27,6 +27,45 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#group' => 'bootstrap',
   );
 
+  $form['breadcrumbs'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Breadcrumbs'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['breadcrumbs']['bootstrap_breadcrumb'] = array(
+    '#type' => 'select',
+    '#title' => t('Breadcrumb visibility'),
+    '#default_value' => theme_get_setting('bootstrap_breadcrumb', 'bootstrap'),
+    '#options' => array(
+      0 => t('Hidden'),
+      1 => t('Visible'),
+      2 => t('Only in admin areas'),
+    ),
+  );
+  $form['breadcrumbs']['bootstrap_breadcrumb_home'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show "Home" breadcrumb link'),
+    '#default_value' => theme_get_setting('bootstrap_breadcrumb_home', 'bootstrap'),
+    '#description' => t('If your site has a module dedicated to handling breadcrumbs already, ensure this setting is enabled.'),
+    '#states' => array(
+      'invisible' => array(
+        ':input[name="bootstrap_breadcrumb"]' => array('value' => 0),
+      ),
+    ),
+  );
+  $form['breadcrumbs']['bootstrap_breadcrumb_title'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show current page title at end'),
+    '#default_value' => theme_get_setting('bootstrap_breadcrumb_title', 'bootstrap'),
+    '#description' => t('If your site has a module dedicated to handling breadcrumbs already, ensure this setting is disabled.'),
+    '#states' => array(
+      'invisible' => array(
+        ':input[name="bootstrap_breadcrumb"]' => array('value' => 0),
+      ),
+    ),
+  );
+
   $form['navbar'] = array(
     '#type' => 'fieldset',
     '#title' => t('Navbar'),
