@@ -664,5 +664,4 @@ function bootstrap_breadcrumb($variables) {
 function bootstrap_preprocess_views_view_table(&$variables) {
   template_preprocess_views_view_table(&$variables);
   $variables['classes'][] = 'table';
-  print_r($variables);
 }
