@@ -32,6 +32,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#title' => t('Breadcrumbs'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
+    '#group' => 'bootstrap',
   );
   $form['breadcrumbs']['bootstrap_breadcrumb'] = array(
     '#type' => 'select',
