@@ -634,6 +634,6 @@ function bootstrap_links__dropbutton($menu){
   if($navbar_menu_position = theme_get_setting('bootstrap_navbar_menu_position')){
     $menu['attributes']['class'][] = $navbar_menu_position;
   }*/
-  return theme_links__dropbutton($menu);
+  return theme_links($menu);
 }
 
