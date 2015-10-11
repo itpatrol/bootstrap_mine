@@ -648,6 +648,10 @@ function bootstrap_menu_local_actions(&$variables) {
           $variables['actions'][$key]['#link']['options']['html'] = TRUE;
           $variables['actions'][$key]['#link']['localized_options']['html'] = TRUE;
         break;
+      default:
+          $variables['actions'][$key]['#link']['title'] =  '<i class="fa fa-plus"></i>' . $link['#link']['title'];
+          $variables['actions'][$key]['#link']['options']['html'] = TRUE;
+          $variables['actions'][$key]['#link']['localized_options']['html'] = TRUE;
     }
   }
   print_r($variables['actions']);
