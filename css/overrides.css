@@ -134,3 +134,9 @@ dl.admin-list {
 .vertical-tab-item:hover{
   background-color: white;
 }
+
+ul.nav.nav-tabs.tabs.primary {
+  height: auto;
+  line-height: inherit;
+  margin: 0px;
+}
