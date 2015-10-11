@@ -169,7 +169,7 @@ a.fieldset-title:hover {
 }
 
 .js fieldset.collapsible .fieldset-title:before {
-  content: "\2212";
+  content: "\e252";
   font-family: 'Glyphicons Halflings';
   font-style: normal;
   font-size: 10px;
@@ -182,7 +182,7 @@ a.fieldset-title:hover {
 }
 
 .js fieldset.collapsed .fieldset-title:before {
-  content: "\2b";
+  content: "\e250";
   font-family: 'Glyphicons Halflings';
   font-style: normal;
   font-size: 10px;
