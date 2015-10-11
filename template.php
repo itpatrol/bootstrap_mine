@@ -406,6 +406,7 @@ function bootstrap_password($variables) {
  * @ingroup themeable
  */
 function bootstrap_search($variables) {
+  print_r($variables);
   $variables['element']['#attributes']['class'][] = 'form-control';
   return theme_search($variables);
 }
