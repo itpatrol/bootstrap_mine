@@ -677,8 +677,17 @@ function bootstrap_breadcrumb($variables) {
     // Provide a navigational heading to give context for breadcrumb links to
     // screen-reader users. Make the heading invisible with .element-invisible.
     $output .= '<h2 class="element-invisible">' . t('You are here') . '</h2>';
-    $output .= '<ol  class="breadcrumb" ><li>' . implode('</li><li>', $breadcrumb) . '</li></ol>';
-    $output .= '</nav>';
+    $output .= '<ol  class="breadcrumb" >';
+    $count = 1;
+    foreach($breadcrumb as $item){
+      if($count == count($breadcrumb)){
+        $output .= '<li class="active">' . $item . '</li>';
+      }else{
+        $output .= '<li>' . $item . '</li>';
+      }
+      $count ++;
+    }
+    $output .= '</ol></nav>';
   }
   return $output;
 }
@@ -695,14 +704,9 @@ function bootstrap_preprocess_breadcrumb(&$variables) {
   if (!$show_breadcrumb_home) {
     array_shift($breadcrumb);
   }
-  print_r($breadcrumb);
   if (theme_get_setting('bootstrap_breadcrumb_title') && !empty($breadcrumb)) {
     $item = menu_get_item();
-    $breadcrumb[] = array(
-      // If we are on a non-default tab, use the tab's title.
-      'data' => !empty($item['tab_parent']) ? check_plain($item['title']) : drupal_get_title(),
-      'class' => array('active'),
-    );
+    $breadcrumb[] = empty($item['tab_parent']) ? check_plain($item['title']) : drupal_get_title();
   }
 }
 
