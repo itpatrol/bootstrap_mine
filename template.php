@@ -363,7 +363,6 @@ function bootstrap_textarea($variables) {
  * @ingroup themeable
  */
 function bootstrap_form_element($variables){
-  print_r($variables);
   if($variables['element']['#type'] == 'checkbox'){
     $variables['element']['#wrapper_attributes']['class'][] = 'checkbox';
   }
