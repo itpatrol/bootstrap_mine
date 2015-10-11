@@ -136,5 +136,9 @@ dl.admin-list {
 }
 
 .dropbutton .dropbutton-action > * {
-  padding: 6px 12px;
+  padding: 6px 12px;  
+}
+
+.dropbutton .dropbutton-action a {
+  border: none;
 }
