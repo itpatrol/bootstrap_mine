@@ -250,7 +250,11 @@ function bootstrap_button($variables) {
   if(isset($variables['element']['#attributes']['class'])){
     foreach($variables['element']['#attributes']['class'] as $key => $class){
       if(FALSE !== strpos($class, 'secondary')){
-        $class = $variables['element']['#attributes']['class'][$key] = str_replace('secondary', 'default', $class);
+        if($variables['element']['#id'] == 'edit-delete'){
+          $class = $variables['element']['#attributes']['class'][$key] = 'btn-danger';
+        }else{
+          $class = $variables['element']['#attributes']['class'][$key] = str_replace('secondary', 'default', $class);
+        }
       }
       if(FALSE !== strpos($class, 'button')){
         $variables['element']['#attributes']['class'][$key] = str_replace('button', 'btn', $class);
@@ -259,6 +263,7 @@ function bootstrap_button($variables) {
   } else{
     $variables['element']['#attributes']['class'][] = 'btn-default';  
   }
+   
   $variables['element']['#attributes']['class'][] = 'btn';
   return theme_button($variables);
 }
