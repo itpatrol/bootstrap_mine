@@ -152,3 +152,7 @@ div.handle {
 div.tabs {
   padding-bottom: 10px;
 }
+
+ul.action-links i.fa {
+  padding-right: 10px;
+}
