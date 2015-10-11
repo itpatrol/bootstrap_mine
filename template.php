@@ -395,6 +395,24 @@ function bootstrap_password($variables) {
 }
 
 /**
+ * Returns HTML for a search form element.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: An associative array containing the properties of the element.
+ *     Properties used: #title, #value, #description, #size, #maxlength,
+ *     #placeholder, #required, #attributes, #autocomplete_path.
+ *
+ * @ingroup themeable
+ */
+function bootstrap_search($variables) {
+  $element = $variables['element'];
+  $variables['element']['#attributes']['class'][] = 'form-control';
+  return theme_search($variables);
+}
+
+
+/**
  * Implements hook_preprocess_table().
  */
 function bootstrap_preprocess_table(&$variables) {
