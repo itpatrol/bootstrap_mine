@@ -27,13 +27,14 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#group' => 'bootstrap',
   );
 
-  $form['components']['navbar'] = array(
+  $form['navbar'] = array(
     '#type' => 'fieldset',
     '#title' => t('Navbar'),
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
+    '#group' => 'bootstrap',
   );
-  $form['components']['navbar']['bootstrap_navbar_position'] = array(
+  $form['navbar']['bootstrap_navbar_position'] = array(
     '#type' => 'select',
     '#title' => t('Navbar Position'),
     '#description' => t('Select your Navbar position.'),
@@ -46,7 +47,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#empty_option' => t('Normal'),
   );
   
-  $form['components']['navbar']['bootstrap_navbar_menu_position'] = array(
+  $form['navbar']['bootstrap_navbar_menu_position'] = array(
     '#type' => 'select',
     '#title' => t('Navbar Menu Position'),
     '#description' => t('Select your Navbar Menu position.'),
@@ -58,14 +59,14 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#empty_option' => t('Normal'),
   );
   
-  $form['components']['navbar']['bootstrap_navbar_inverse'] = array(
+  $form['navbar']['bootstrap_navbar_inverse'] = array(
     '#type' => 'checkbox',
     '#title' => t('Inverse navbar style'),
     '#description' => t('Select if you want the inverse navbar style.'),
     '#default_value' => theme_get_setting('bootstrap_navbar_inverse', 'bootstrap'),
   );
 
-  $form['components']['navbar']['bootstrap_navbar_user_menu'] = array(
+  $form['navbar']['bootstrap_navbar_user_menu'] = array(
     '#type' => 'checkbox',
     '#title' => t('Add cog with user-menu'),
     '#description' => t('Select if you want cog style right pulled popup menu.'),
