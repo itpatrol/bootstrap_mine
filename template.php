@@ -638,6 +638,17 @@ function bootstrap_links__dropbutton($menu){
 }
 
 /**
+ * Returns rendered HTML for the local actions.
+ */
+function bootstrap_menu_local_actions(&$variables) {
+  $output = backdrop_render($variables['actions']);
+  if ($output) {
+    $output = '<ul class="nav nav-pills action-links">' . $output . '</ul>';
+  }
+  return $output;
+}
+
+/**
  * Returns HTML for a breadcrumb trail.
  *
  * @param $variables
