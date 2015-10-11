@@ -144,3 +144,7 @@ dl.admin-list {
 {
   border: none;
 }
+
+div.handle {
+  box-sizing: content-box;
+}
