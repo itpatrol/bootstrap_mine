@@ -645,6 +645,7 @@ function bootstrap_menu_local_actions(&$variables) {
     switch($link['#link']['path']){
       case 'admin/people/create':
           $variables['actions'][$key]['#link']['title'] =  '<i class="fa fa-user-plus"></i>' . $link['#link']['title'];
+          $variables['actions'][$key]['#link']['options']['html'] = TRUE;
         break;
     }
   }
