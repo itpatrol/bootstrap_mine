@@ -139,6 +139,8 @@ dl.admin-list {
   padding: 6px 12px;  
 }
 
-.dropbutton .dropbutton-action a {
+.dropbutton .dropbutton-action a,
+.dropbutton .dropbutton-action a:hover
+{
   border: none;
 }
