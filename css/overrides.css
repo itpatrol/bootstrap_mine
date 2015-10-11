@@ -148,3 +148,7 @@ dl.admin-list {
 div.handle {
   box-sizing: content-box;
 }
+
+div.tabs {
+  padding-bottom: 10px;
+}
