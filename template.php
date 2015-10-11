@@ -641,6 +641,7 @@ function bootstrap_links__dropbutton($menu){
  * Returns rendered HTML for the local actions.
  */
 function bootstrap_menu_local_actions(&$variables) {
+  print_r($variables['actions']);
   $output = backdrop_render($variables['actions']);
   if ($output) {
     $output = '<ul class="nav nav-pills action-links">' . $output . '</ul>';
