@@ -695,7 +695,7 @@ function bootstrap_preprocess_breadcrumb(&$variables) {
   if (!$show_breadcrumb_home) {
     array_shift($breadcrumb);
   }
-
+  print_r($breadcrumb);
   if (theme_get_setting('bootstrap_breadcrumb_title') && !empty($breadcrumb)) {
     $item = menu_get_item();
     $breadcrumb[] = array(
