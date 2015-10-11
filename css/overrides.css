@@ -134,3 +134,7 @@ dl.admin-list {
 .vertical-tab-item:hover{
   background-color: white;
 }
+
+.dropbutton .dropbutton-action > * {
+  padding: 6px 12px;
+}

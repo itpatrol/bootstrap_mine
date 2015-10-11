@@ -630,11 +630,10 @@ function bootstrap_menu_local_tasks(&$variables) {
 }
 
 function bootstrap_links__dropbutton($menu){
-/*  $menu['attributes']['class'] = array('menu','nav','navbar-nav');
-  if($navbar_menu_position = theme_get_setting('bootstrap_navbar_menu_position')){
-    $menu['attributes']['class'][] = $navbar_menu_position;
-  }*/
-  print_r($menu);
+  foreach($menu['links'] as $name => $settings){
+    $menu['links'][$name]['attributes']['class'][] = 'btn';
+    $menu['links'][$name]['attributes']['class'][] = 'btn-default';
+  }
   return theme_links($menu);
 }
 
