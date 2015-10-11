@@ -246,7 +246,7 @@ function bootstrap_fieldset($variables) {
  * @ingroup themeable
  */
 function bootstrap_button($variables) {
-  print_r($variables);
+
   if(isset($variables['element']['#attributes']['class'])){
     foreach($variables['element']['#attributes']['class'] as $key => $class){
       if(FALSE !== strpos($class, 'secondary')){
