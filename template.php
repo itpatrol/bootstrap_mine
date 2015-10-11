@@ -661,6 +661,6 @@ function bootstrap_breadcrumb($variables) {
 /**
  * Display a view as a table style.
  */
-function bootstrap_views_view_table(&$variables) {
+function template_preprocess_views_view_table(&$variables) {
   print_r($variables);
 }
