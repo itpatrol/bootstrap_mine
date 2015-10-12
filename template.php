@@ -787,7 +787,7 @@ function bootstrap_node_add_list($variables) {
   $content = $variables['content'];
   $output = '';
   if ($content) {
-    $output = '<ul class="list-group>';
+    $output = '<ul class="list-group">';
     foreach ($content as $item) {
       $output .= '<li class="list-group-item">';
       $output .= '<span class="label">' . l($item['title'], $item['href'], $item['localized_options']) . '</span>';
@@ -811,7 +811,7 @@ function bootstrap_admin_block_content($variables) {
   $content = $variables['content'];
   $output = '';
   if (!empty($content)) {
-    $output = '<ul class="list-group>';
+    $output = '<ul class="list-group">';
     foreach ($content as $item) {
       $output .= '<li class="list-group-item">';
       $output .= l($item['title'], $item['href'], $item['localized_options']);
