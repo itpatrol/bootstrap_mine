@@ -83,7 +83,7 @@
     <span class="text-muted pull-right">
         <small class="text-muted"><?php print $changed; ?></small>
     </span>
-
+    <strong class="text-success"><?php print $author; ?></strong>
     <p class="content"<?php print backdrop_attributes($content_attributes); ?>>
       <?php
         // We hide the links now so that we can render them later.
