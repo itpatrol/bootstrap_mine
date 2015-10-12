@@ -807,20 +807,6 @@ function bootstrap_node_add_list($variables) {
  * Use unordered list markup in both compact and extended mode.
  */
 function bootstrap_admin_block_content($variables) {
-  $content = $variables['content'];
-  $output = '';
-  if (!empty($content)) {
-    $output = '<ul class="list-group">';
-    foreach ($content as $item) {
-      $output .= '<li class="list-group-item">';
-      $output .= l($item['title'], $item['href'], $item['localized_options']);
-      if (isset($item['description'])) {
-        $output .= '<div class="description">' . filter_xss_admin($item['description']) . '</div>';
-      }
-      $output .= '</li>';
-    }
-    $output .= '</ul>';
-  }
-  return $output;
+  return bootstrap_node_add_list($variables);
 }
 
