@@ -237,6 +237,8 @@ h1.page-title {
 
 .comment {
   padding-bottom: 15px;
+  padding-top: 15px;
+  margin-top: 0px;
   border-bottom: 1px dashed #efefef;
 }
 
