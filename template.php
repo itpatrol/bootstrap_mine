@@ -741,7 +741,7 @@ function bootstrap_preprocess_breadcrumb(&$variables) {
  * @ingroup themeable
  */
 function bootstrap_container($variables) {
-  if($variables['element']['#attributes']['id'] == 'edit-display-settings-details'){
+  if(isset($variables['element']['#attributes']['id']) && $variables['element']['#attributes']['id'] == 'edit-display-settings-details'){
     print_r($variables);  
   }
   return theme_container($variables);
