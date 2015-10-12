@@ -442,6 +442,9 @@ function bootstrap_search($variables) {
  * @ingroup themeable
  */
 function bootstrap_select($variables) {
+  if(isset($variables['element']['#attributes']['size'])){
+    unset($variables['element']['#attributes']['size']);  
+  }
   $variables['element']['#attributes']['class'][] = 'form-control';
   return theme_select($variables);
 }
