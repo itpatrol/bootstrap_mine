@@ -726,6 +726,25 @@ function bootstrap_preprocess_breadcrumb(&$variables) {
   }
 }
 
+/**
+ * Returns HTML to wrap child elements in a container.
+ *
+ * Used for grouped form items. Can also be used as a #theme_wrapper for any
+ * renderable element, to surround it with a <div> and add attributes such as
+ * classes or an HTML id.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: An associative array containing the properties of the element.
+ *     Properties used: #id, #attributes, #children.
+ *
+ * @ingroup themeable
+ */
+function bootstrap_container($variables) {
+  print_r($variables);
+  return theme_container($variables);
+}
+
 
 /**
  * Display a view as a table style.
