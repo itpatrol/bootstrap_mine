@@ -5,7 +5,7 @@
  */
 ?>
 <div class="<?php print implode(' ', $classes); ?> panel panel-default"<?php print backdrop_attributes($attributes); ?>>
-  <?php if (!empty($title) && !empty($actions)) : ?>
+  <?php if (!empty($title) or !empty($actions)) : ?>
   <div class="panel-heading">
   <?php endif; ?>  
   <?php if (!empty($title)) : ?>
@@ -15,7 +15,7 @@
   <?php if(!empty($actions)) : ?>
     <?php print $actions; ?>
   <?php endif; ?>
-  <?php if (!empty($title) && !empty($actions)) : ?>
+  <?php if (!empty($title) or !empty($actions)) : ?>
   </div>
   <?php endif; ?>
   <div class="panel-body">
