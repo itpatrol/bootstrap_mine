@@ -229,3 +229,8 @@ a.fieldset-title:hover {
 h1.page-title {
   padding-bottom: 15px;
 }
+
+.user-picture .img {
+  border: 1px solid #e5e7e8;
+  padding: 1px; 
+}
