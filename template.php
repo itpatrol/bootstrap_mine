@@ -741,12 +741,10 @@ function bootstrap_preprocess_breadcrumb(&$variables) {
  * @ingroup themeable
  */
 function bootstrap_container($variables) {
-  if(isset($variables['element']['#attributes']['id']) && $variables['element']['#attributes']['id'] == 'edit-display-settings-details'){
-    $variables['element']['columns']['first']['#attributes']['class'] = array('col-xs-12','cols-sm-12', 'col-md-4');
-    $variables['element']['columns']['second']['#attributes']['class'] = array('col-xs-12','cols-sm-12', 'col-md-4');
-    $variables['element']['columns']['third']['#attributes']['class'] = array('col-xs-12','cols-sm-12', 'col-md-4');
+  if(isset($variables['element']['#attributes']['class'][0]) && $variables['element']['#attributes']['class'][0] == 'views-display-column'){
+    $variables['element']['#attributes']['class'] = array('col-xs-12','cols-sm-12', 'col-md-4');
   }
-  print_r($variables['element']);
+//  print_r($variables['element']);
   return theme_container($variables);
 }
 
