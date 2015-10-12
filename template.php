@@ -777,3 +777,51 @@ function bootstrap_form_alter(array &$form, array &$form_state = array(), $form_
 
   }
 }
+
+/**
+ * Overrides theme_node_add_list().
+ *
+ * Display the list of available node types for node creation.
+ */
+function bootstrap_node_add_list($variables) {
+  $content = $variables['content'];
+  $output = '';
+  if ($content) {
+    $output = '<ul class="list-group>';
+    foreach ($content as $item) {
+      $output .= '<li class="list-group-item">';
+      $output .= '<span class="label">' . l($item['title'], $item['href'], $item['localized_options']) . '</span>';
+      $output .= '<div class="description">' . filter_xss_admin($item['description']) . '</div>';
+      $output .= '</li>';
+    }
+    $output .= '</ul>';
+  }
+  else {
+    $output = '<p>' . t('You have not created any content types yet. Go to the <a href="@create-content">content type creation page</a> to add a new content type.', array('@create-content' => url('admin/structure/types/add'))) . '</p>';
+  }
+  return $output;
+}
+
+/**
+ * Overrides theme_admin_block_content().
+ *
+ * Use unordered list markup in both compact and extended mode.
+ */
+function bootstrap_admin_block_content($variables) {
+  $content = $variables['content'];
+  $output = '';
+  if (!empty($content)) {
+    $output = '<ul class="list-group>';
+    foreach ($content as $item) {
+      $output .= '<li class="list-group-item">';
+      $output .= l($item['title'], $item['href'], $item['localized_options']);
+      if (isset($item['description'])) {
+        $output .= '<div class="description">' . filter_xss_admin($item['description']) . '</div>';
+      }
+      $output .= '</li>';
+    }
+    $output .= '</ul>';
+  }
+  return $output;
+}
+
