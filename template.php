@@ -746,6 +746,7 @@ function bootstrap_container($variables) {
     $variables['element']['columns']['second']['#attributes']['class'] = array('col-xs-12','cols-sm-12', 'col-md-4');
     $variables['element']['columns']['third']['#attributes']['class'] = array('col-xs-12','cols-sm-12', 'col-md-4');
   }
+  print_r($variables['element']['columns']);
   return theme_container($variables);
 }
 
