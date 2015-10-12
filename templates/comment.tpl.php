@@ -96,7 +96,8 @@
       </div>
       <?php endif; ?>
     </p>
-
-  <?php print render($content['links']) ?>
+    <div class="pull-right">
+    <?php print render($content['links']) ?>
+    </div>
   </div>
 </article>
