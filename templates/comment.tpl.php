@@ -73,13 +73,13 @@
                                 </li>
  */
 ?>
-<article class="media <?php if ($new) print "bg-info" ?> <?php print implode(' ', $classes); ?> clearfix"<?php print backdrop_attributes($attributes); ?>>
+<article class="col-xs-12 col-sm-12 col-md-12 <?php if ($new) print "bg-info" ?> <?php print implode(' ', $classes); ?> clearfix"<?php print backdrop_attributes($attributes); ?>>
   <?php if($user_picture): ?>
-  <div class="pull-left">
+  <div class="col-xs-2 col-sm-1 col-md-1">
     <?php print $user_picture; ?>
   </div>
   <?php endif; ?>  
-  <div class="media-body">
+  <div class="col-xs-10 col-sm-11 col-md-11">
     <span class="text-muted pull-right">
         <small class="text-muted"><?php print $changed; ?></small>
     </span>
