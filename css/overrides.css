@@ -100,10 +100,13 @@ tr.even {
 
 .admin a.list-group-item {
   border: none;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
   margin-left: 0px;
   margin-right: 0px;
+}
+.admin ul.list-group {
+  margin-bottom: 0px;
 }
 
 .vertical-tab-item {
