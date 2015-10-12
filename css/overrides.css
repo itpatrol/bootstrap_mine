@@ -214,3 +214,11 @@ a.fieldset-title:hover {
 .views-ui-display-tab-bucket {
   padding-top: 0px;
 }
+
+.views-ui-display-tab-bucket .dropbutton li > * {
+  padding: 6px 12px;
+}
+
+.views-ui-display-tab-bucket + .views-ui-display-tab-bucket {
+  border-top: 1px solid;
+}
