@@ -79,7 +79,10 @@
     <?php print $user_picture; ?>
   </div>
   <?php endif; ?>  
-
+  <div class="media-body">
+    <span class="text-muted pull-right">
+        <small class="text-muted"><?php print $changed; ?></small>
+    </span>
   <?php print render($title_prefix); ?>
   <?php if ($new): ?>
     <mark class="new"><?php print $new; ?></mark>
@@ -88,7 +91,6 @@
   <?php print render($title_suffix); ?>
 
   <footer>
-    <?php print $user_picture; ?>
     <p class="submitted"><?php print $submitted; ?></p>
     <?php print $permalink; ?>
   </footer>
@@ -107,4 +109,5 @@
   </div>
 
   <?php print render($content['links']) ?>
+  </div>
 </article>
