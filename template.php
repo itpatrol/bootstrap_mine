@@ -741,7 +741,7 @@ function bootstrap_preprocess_breadcrumb(&$variables) {
  * @ingroup themeable
  */
 function bootstrap_container($variables) {
-  print_r($variables);
+//  print_r($variables);
   return theme_container($variables);
 }
 
