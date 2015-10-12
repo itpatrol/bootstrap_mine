@@ -236,3 +236,13 @@ h1.page-title {
   background-image: none !important;
   background: transparent !important;
 }
+
+.cke_toolgroup {
+  background-image: none !important;
+  background: transparent !important;
+}
+
+.cke_button_on {
+  background-image: none !important;
+  background: transparent !important;  
+}
