@@ -192,3 +192,8 @@ a.fieldset-title:hover {
 .container-inline div {
   display: inline-block;
 }
+
+.views-display-setting .label {
+  color: #666666;
+  font-size: 12px;
+}
