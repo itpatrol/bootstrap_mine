@@ -224,6 +224,5 @@ a.fieldset-title:hover {
 }
 
 .views-ui-display-tab-bucket + .views-ui-display-tab-bucket {
-  border-top-width: 1px;
-  border-top-style: solid;
+  border-top: 1px solid #ddd;
 }
