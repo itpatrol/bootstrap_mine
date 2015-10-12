@@ -210,3 +210,7 @@ a.fieldset-title:hover {
   margin: 0px;
   padding-left:15px;
 }
+
+.views-ui-display-tab-bucket {
+  padding-top: 0px;
+}
