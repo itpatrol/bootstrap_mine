@@ -83,30 +83,19 @@
     <span class="text-muted pull-right">
         <small class="text-muted"><?php print $changed; ?></small>
     </span>
-  <?php print render($title_prefix); ?>
-  <?php if ($new): ?>
-    <mark class="new"><?php print $new; ?></mark>
-  <?php endif; ?>
-  <h3><?php print $title; ?></h3>
-  <?php print render($title_suffix); ?>
 
-  <footer>
-    <p class="submitted"><?php print $submitted; ?></p>
-    <?php print $permalink; ?>
-  </footer>
-
-  <div class="content"<?php print backdrop_attributes($content_attributes); ?>>
-    <?php
-      // We hide the links now so that we can render them later.
-      hide($content['links']);
-      print render($content);
-    ?>
-    <?php if ($signature): ?>
-    <div class="user-signature">
-      <?php print $signature; ?>
-    </div>
-    <?php endif; ?>
-  </div>
+    <p class="content"<?php print backdrop_attributes($content_attributes); ?>>
+      <?php
+        // We hide the links now so that we can render them later.
+        hide($content['links']);
+        print render($content);
+      ?>
+      <?php if ($signature): ?>
+      <div class="user-signature">
+        <?php print $signature; ?>
+      </div>
+      <?php endif; ?>
+    </p>
 
   <?php print render($content['links']) ?>
   </div>
