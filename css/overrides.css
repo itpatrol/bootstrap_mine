@@ -98,12 +98,10 @@ tr.even {
   padding: 8px;
 }
 
-dl.admin-list {
-  margin-bottom: 0px;
-}
-
-.admin-list dd {
-  padding:5px 0px 15px 15px;
+.admin a.list-group-item {
+  border: none;
+  padding: 0px;
+  margin: 0px;
 }
 
 .vertical-tab-item {
