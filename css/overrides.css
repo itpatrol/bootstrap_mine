@@ -219,10 +219,6 @@ a.fieldset-title:hover {
   padding: 6px 12px;
 }
 
-.views-ui-display-tab-bucket.page-settings {
-  margin-bottom: 0px;
-}
-
 .views-ui-display-tab-bucket + .views-ui-display-tab-bucket {
   border-top: 1px solid #ddd;
 }
