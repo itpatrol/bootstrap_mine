@@ -229,8 +229,10 @@ h1.page-title {
 
 /* cke */
 .cke_top {
-  background-image: none;
+  background-image: none !important;
+  background: transparent !important;
 }
 .cke_bottom {
-  background-image: none;
+  background-image: none !important;
+  background: transparent !important;
 }
