@@ -226,3 +226,11 @@ a.fieldset-title:hover {
 h1.page-title {
   padding-bottom: 15px;
 }
+
+/* cke */
+.cke_top {
+  background-image: none;
+}
+.cke_bottom {
+  background-image: none;
+}
