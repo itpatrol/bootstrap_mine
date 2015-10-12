@@ -74,7 +74,7 @@
  */
 ?>
 <article class="media <?php print implode(' ', $classes); ?> clearfix"<?php print backdrop_attributes($attributes); ?>>
-  <?php if($user_picture); ?>
+  <?php if($user_picture): ?>
   <div class="pull-left">
     <?php print $user_picture; ?>
   </div>
