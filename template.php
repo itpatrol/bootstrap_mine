@@ -789,10 +789,9 @@ function bootstrap_node_add_list($variables) {
   if ($content) {
     $output = '<ul class="list-group">';
     foreach ($content as $item) {
-      $output .= '<li class="list-group-item">';
       $title = '<h4 class="list-group-item-heading">' . $item['title'] . '</h4>' . '<p class="list-group-item-text">' . filter_xss_admin($item['description']) . '</p>';
+      $item['localized_options']['class'][] = 'list-group-item';
       $output .= l($title, $item['href'], $item['localized_options']);
-      $output .= '</li>';
     }
     $output .= '</ul>';
   }
