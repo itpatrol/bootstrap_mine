@@ -197,3 +197,8 @@ a.fieldset-title:hover {
   color: #666666;
   font-size: 12px;
 }
+
+#views-ui-preview-form > div > div,
+#views-ui-preview-form > div > input {
+  float: none;  
+}
