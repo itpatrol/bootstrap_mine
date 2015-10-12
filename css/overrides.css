@@ -239,3 +239,7 @@ h1.page-title {
   padding: 10px 5px;
   border-bottom: 1px dashed #efefef;
 }
+
+.comments ul.pager {
+  padding-top: 20px;
+}
