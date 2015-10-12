@@ -134,6 +134,10 @@ tr.even {
   background-color: white;
 }
 
+.vertical-tabs-pane .fieldset-wrapper {
+  padding: 15px;
+}
+
 .dropbutton .dropbutton-action > * {
   padding: 6px 12px;  
 }
