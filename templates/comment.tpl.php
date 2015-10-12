@@ -73,7 +73,7 @@
                                 </li>
  */
 ?>
-<article class="media bg-success <?php print implode(' ', $classes); ?> clearfix"<?php print backdrop_attributes($attributes); ?>>
+<article class="media <?php if ($new) print "bg-info" ?> <?php print implode(' ', $classes); ?> clearfix"<?php print backdrop_attributes($attributes); ?>>
   <?php if($user_picture): ?>
   <div class="pull-left">
     <?php print $user_picture; ?>
