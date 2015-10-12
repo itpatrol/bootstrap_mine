@@ -208,5 +208,5 @@ a.fieldset-title:hover {
 }
 .views-display-columns > *:first-child {
   margin: 0px;
-  padding: 0px;
+  padding-left:15px;
 }
