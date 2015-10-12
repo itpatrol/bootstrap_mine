@@ -248,20 +248,26 @@ function bootstrap_fieldset($variables) {
 function bootstrap_button($variables) {
 
   if(isset($variables['element']['#attributes']['class'])){
+    $default = TRUE;
     foreach($variables['element']['#attributes']['class'] as $key => $class){
       if(FALSE !== strpos($class, 'secondary')){
         if($variables['element']['#id'] == 'edit-delete'){
-          $class = $variables['element']['#attributes']['class'][$key] = 'btn-danger';
+          $variables['element']['#attributes']['class'][$key] = 'btn-danger';
+          $default = FALSE;
         }else{
           $class = $variables['element']['#attributes']['class'][$key] = str_replace('secondary', 'default', $class);
         }
       }
       if(FALSE !== strpos($class, 'button')){
         $variables['element']['#attributes']['class'][$key] = str_replace('button', 'btn', $class);
+        $default = FALSE;
       }
     }
+    if($default){
+      $variables['element']['#attributes']['class'][] = 'btn-default';  
+    }
   } else{
-    $variables['element']['#attributes']['class'][] = 'btn-default';  
+    $variables['element']['#attributes']['class'][] = 'btn-default';
   }
    
   $variables['element']['#attributes']['class'][] = 'btn';
