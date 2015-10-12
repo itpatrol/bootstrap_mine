@@ -222,3 +222,7 @@ a.fieldset-title:hover {
 .views-ui-display-tab-bucket + .views-ui-display-tab-bucket {
   border-top: 1px solid #ddd;
 }
+
+h1.page-title {
+  padding-bottom: 15px;
+}
