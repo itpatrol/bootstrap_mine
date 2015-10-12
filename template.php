@@ -742,7 +742,9 @@ function bootstrap_preprocess_breadcrumb(&$variables) {
  */
 function bootstrap_container($variables) {
   if(isset($variables['element']['#attributes']['id']) && $variables['element']['#attributes']['id'] == 'edit-display-settings-details'){
-    print_r($variables);  
+    $variables['element']['columns']['first']['#attributes']['class'] = array('col-xs-12','cols-sm-12', 'col-md-4');
+    $variables['element']['columns']['second']['#attributes']['class'] = array('col-xs-12','cols-sm-12', 'col-md-4');
+    $variables['element']['columns']['third']['#attributes']['class'] = array('col-xs-12','cols-sm-12', 'col-md-4');
   }
   return theme_container($variables);
 }
