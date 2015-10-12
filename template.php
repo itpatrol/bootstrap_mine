@@ -442,6 +442,7 @@ function bootstrap_search($variables) {
  * @ingroup themeable
  */
 function bootstrap_select($variables) {
+  print_r($variables);
   if(isset($variables['element']['#attributes']['size'])){
     unset($variables['element']['#attributes']['size']);  
   }
