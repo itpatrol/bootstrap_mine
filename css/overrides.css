@@ -188,3 +188,7 @@ a.fieldset-title:hover {
   font-size: 13px;
   padding-right: 10px;
 }
+
+.container-inline div {
+  display: inline-block;
+}
