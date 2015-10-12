@@ -202,3 +202,11 @@ a.fieldset-title:hover {
 #views-ui-preview-form > div > input {
   float: none;  
 }
+
+.views-display-columns > * {
+  margin: 0;
+}
+.views-display-columns > *:first-child {
+  margin: 0px;
+  padding: 0px;
+}
