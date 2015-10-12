@@ -222,3 +222,7 @@ a.fieldset-title:hover {
 .views-ui-display-tab-bucket.page-settings {
   margin-bottom: 0px;
 }
+
+.views-ui-display-tab-bucket + .views-ui-display-tab-bucket {
+  border-top-width: 1px;
+}
