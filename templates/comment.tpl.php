@@ -99,4 +99,5 @@
 
   <?php print render($content['links']) ?>
   </div>
+  <div class="clearfix"></div>
 </article>
