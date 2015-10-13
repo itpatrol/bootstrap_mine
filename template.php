@@ -105,7 +105,7 @@ function bootstrap_js_alter(&$js) {
 }
 
 function bootstrap_is_header($set = 'get'){
-  static $is_header = FALSE;
+  static $is_header;
   if($set == 'get'){
     return $is_header;
   } else{
