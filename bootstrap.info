@@ -6,7 +6,7 @@ backdrop = 1.x
 
 settings[bootstrap_cdn] = 3.3.5
 settings[bootstrap_font_awesome] = 4.4.0
-settings[bootstrap_container] = fixed
+settings[bootstrap_container] = container
 
 stylesheets[all][] = css/style.css
 

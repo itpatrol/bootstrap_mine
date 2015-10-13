@@ -33,8 +33,8 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#default_value' => theme_get_setting('bootstrap_container', 'bootstrap'),
     '#description' => t('Switch between full width (fluid) or fixed (max 1170px) width.'),
     '#options' => array(
-      'fixed' => t('Fixed'),
-      'full' => t('Fluid'),
+      'container' => t('Fixed'),
+      'container-fluid' => t('Fluid'),
     ),
     '#empty_option' => t('Fixed'),
   );

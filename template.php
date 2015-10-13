@@ -165,7 +165,7 @@ function bootstrap_preprocess_header(&$variables){
     $variables['navbar_classes_array'][] = 'navbar-' . $navbar_position;
   }
   
-  echo theme_get_setting('bootstrap_container');
+  $variables['container_class'] = theme_get_setting('bootstrap_container');
   
   if (theme_get_setting('bootstrap_navbar_inverse')) {
     $variables['navbar_classes_array'][] = 'navbar-inverse';

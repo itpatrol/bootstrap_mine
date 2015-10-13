@@ -20,7 +20,7 @@
  */
 ?>
 <header id="navbar" role="banner" class="<?php print implode(" ",$navbar_classes_array); ?>">
-  <div class="container">
+  <div class="<?php print $container_class;?>">
     <div class="navbar-header">
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
