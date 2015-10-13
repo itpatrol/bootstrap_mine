@@ -104,7 +104,7 @@ function bootstrap_js_alter(&$js) {
   }
 }
 
-function bootstrap_is_header($set = 'get'){
+function bootstrap_is_header($set){
   static $is_header;
   echo "debug info: $set $is_header";
   if( strcmp($set, 'get') ){
