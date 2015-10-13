@@ -14,14 +14,6 @@ body div#admin-bar{
   z-index:1600;
 }
 
-.admin-bar #navbar {
-  padding-top: 33px;
-}
-
-header#navbar.navbar-static-top-padding {
-  padding-top: 0px;
-}
-
 .navbar-brand img{
   height: 40px;
   float: left;
