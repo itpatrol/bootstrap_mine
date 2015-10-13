@@ -42,8 +42,14 @@ div.radio.form-item.form-type-radio.form-item-bootstrap-bootswatch {
   float: left;
 }
 
+@media (min-width:900px){
+  div.radio.form-item.form-type-radio.form-item-bootstrap-bootswatch {
+    width: 50%;
+  }
+}
 
-@media (min-width:768px){
+
+@media (min-width:1000px){
   div.radio.form-item.form-type-radio.form-item-bootstrap-bootswatch {
     width: 30%;
   }
