@@ -98,7 +98,7 @@
     <span class="text-muted pull-right">
         <small class="text-muted"><?php print $date; ?></small>
     </span>
-    <strong class="text-success"><?php print theme_username(user_load($uid)); ?></strong>
+    <strong class="text-success"><?php print theme_username(array('account' => user_load($uid))); ?></strong>
     <?php endif; ?>
   
     <?php print render($title_prefix); ?>
