@@ -111,7 +111,9 @@ function bootstrap_preprocess_layout(&$variables) {
   $layout = $variables['layout'];
   $layout_name = $layout->layout;
   
-  print_r($layout);
+  foreach($layout->content as $key => $block){
+    echo $block->module . $block->delta;
+  }
   
   foreach($layout->positions as $region_name => $region_value){
     if($well = theme_get_setting('bootstrap_well_' . $layout_name . '_' . $region_name)){
