@@ -141,6 +141,9 @@ function bootstrap_preprocess_page(&$variables){
     if($navbar_position == 'fixed-top' && user_access('access administration bar') && !admin_bar_suppress(FALSE)){
       backdrop_add_js(backdrop_get_path('theme', 'bootstrap') . '/js/navbar-fixed-top.js');
     }
+    if($navbar_position == 'static-top'){
+      backdrop_add_js(backdrop_get_path('theme', 'bootstrap') . '/js/navbar-static-top.js');
+    }
   }
 }
 
