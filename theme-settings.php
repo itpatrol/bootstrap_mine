@@ -173,7 +173,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#options' => $bootswatch_themes,
     '#empty_option' => t('Disabled'),
     '#empty_value' => NULL,
-    '#prefix' => '<div class="container section-preview">',
+    '#prefix' => '<div class="section-preview">',
     '#suffix' => '</div>',
   );
   if (empty($bootswatch_themes)) {
