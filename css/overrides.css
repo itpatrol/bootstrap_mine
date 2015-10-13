@@ -19,7 +19,7 @@ body.navbar-admin-bar.navbar-is-fixed-top .navbar-fixed-top  {
   padding-top: 33px;
 }
 
-/* logo fixes to meet navbar requirements by size*/
+/* Logo fixes to meet navbar requirements by size. */
 .navbar-brand img{
   height: 40px;
   float: left;
@@ -31,6 +31,7 @@ ul li.collapsed,ul li.expanded,ul li.leaf{
   list-style:none;list-style-image:none;
 }
 
+/* Form style fixes. */
 html.js fieldset.collapsed{
   height:auto;
 }
@@ -85,6 +86,7 @@ fieldset .panel-heading a.panel-title:hover{
   margin-right: 2px;
 }
 
+/* Table style fixes. */
 th.checkbox,td.checkbox,th.radio,td.radio{
   display:table-cell;
 }
@@ -97,13 +99,7 @@ tr.even {
   padding: 8px;
 }
 
-.admin a.list-group-item {
-  border: none;
-}
-.admin ul.list-group {
-  margin-bottom: 0px;
-}
-
+/* Vertical tab fixes. */
 .vertical-tab-item {
   background-color: #f7f7f9;
 }
