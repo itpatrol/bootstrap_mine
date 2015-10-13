@@ -242,6 +242,6 @@ h1.page-title {
   border-bottom: 1px dashed #efefef;
 }
 
-.comments ul.pager {
+ul.pager {
   padding-top: 20px;
 }
