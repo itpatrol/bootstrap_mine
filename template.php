@@ -122,6 +122,7 @@ function bootstrap_preprocess_layout(&$variables) {
   
   foreach($layout->content as $key => $block){
     if($block->module == 'system' && $block->delta == 'header'){
+      echo "HEADER IS HERE!";
       bootstrap_is_header(true);
     }
   }
@@ -146,6 +147,7 @@ function bootstrap_preprocess_page(&$variables){
   backdrop_add_html_head($no_old_ie_compatibility_modes, 'no_old_ie_compatibility_modes');
   
   if(bootstrap_is_header('get')){
+    echo "Add code here!";
     if (user_access('access administration bar') && !admin_bar_suppress(FALSE)) {
       $variables['classes'][] = 'navbar-admin-bar';
     }
