@@ -110,7 +110,8 @@ function bootstrap_js_alter(&$js) {
 function bootstrap_preprocess_layout(&$variables) {
   $layout = $variables['layout'];
   $layout_name = $layout->layout;
-  echo 1;
+  
+  print_r($layout);
   
   foreach($layout->positions as $region_name => $region_value){
     if($well = theme_get_setting('bootstrap_well_' . $layout_name . '_' . $region_name)){
@@ -122,7 +123,6 @@ function bootstrap_preprocess_layout(&$variables) {
 }
 
 function bootstrap_preprocess_page(&$variables){
-  echo 2;
   $no_old_ie_compatibility_modes = array(
     '#tag' => 'meta',
     '#attributes' => array(
