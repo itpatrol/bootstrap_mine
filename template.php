@@ -5,11 +5,6 @@
  */
 
 /**
- * Include common functions used through out theme.
- */
-include_once dirname(__FILE__) . '/theme/common.inc';
-
-/**
  * Implements hook_theme().
  *
  * Register theme hook implementations.
