@@ -122,7 +122,6 @@ function bootstrap_preprocess_layout(&$variables) {
 
 function bootstrap_preprocess_page(&$variables){
 
-  print_r($variables);
   $no_old_ie_compatibility_modes = array(
     '#tag' => 'meta',
     '#attributes' => array(
