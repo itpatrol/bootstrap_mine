@@ -120,6 +120,8 @@ function bootstrap_preprocess_layout(&$variables) {
       bootstrap_is_header(true);
     }
   }
+  
+  backdrop_add_js('(function($){ $(".layout").addClass("' . theme_get_setting('bootstrap_container') . '");})(jQuery);', array('type' => 'inline', 'scope' => 'footer'));
 }
 
 function bootstrap_preprocess_page(&$variables){
