@@ -104,6 +104,15 @@ function bootstrap_js_alter(&$js) {
   }
 }
 
+function bootstrap_is_header($set = 'get'){
+  static $is_header = FALSE;
+  if($set == 'get'){
+    return $is_header;
+  } else{
+    $is_header = $set;
+  }
+}
+
 /**
  * Implements hook_preprocess_layout().
  */
@@ -112,7 +121,9 @@ function bootstrap_preprocess_layout(&$variables) {
   $layout_name = $layout->layout;
   
   foreach($layout->content as $key => $block){
-    echo $block->module . $block->delta;
+    if($block->module == 'system' && $block->delta == 'header'){
+      bootstrap_is_header(true);
+    }
   }
   
   foreach($layout->positions as $region_name => $region_value){
@@ -133,21 +144,23 @@ function bootstrap_preprocess_page(&$variables){
     ),
   );
   backdrop_add_html_head($no_old_ie_compatibility_modes, 'no_old_ie_compatibility_modes');
-    
-  if (user_access('access administration bar') && !admin_bar_suppress(FALSE)) {
-    $variables['classes'][] = 'navbar-admin-bar';
-  }
-  if($navbar_position = theme_get_setting('bootstrap_navbar_position'))
-  {
-    $variables['classes'][] = 'navbar-is-' . $navbar_position;
-    
-     $config = config('admin_bar.settings');
-     
-    if($navbar_position == 'fixed-top' && user_access('access administration bar') && !admin_bar_suppress(FALSE) && !$config->get('position_fixed') ){
-      backdrop_add_js(backdrop_get_path('theme', 'bootstrap') . '/js/navbar-fixed-top.js');
+  
+  if(bootstrap_is_header('get')){
+    if (user_access('access administration bar') && !admin_bar_suppress(FALSE)) {
+      $variables['classes'][] = 'navbar-admin-bar';
     }
-    if($navbar_position == 'static-top'){
-      backdrop_add_js(backdrop_get_path('theme', 'bootstrap') . '/js/navbar-static-top.js');
+    if($navbar_position = theme_get_setting('bootstrap_navbar_position'))
+    {
+      $variables['classes'][] = 'navbar-is-' . $navbar_position;
+      
+       $config = config('admin_bar.settings');
+       
+      if($navbar_position == 'fixed-top' && user_access('access administration bar') && !admin_bar_suppress(FALSE) && !$config->get('position_fixed') ){
+        backdrop_add_js(backdrop_get_path('theme', 'bootstrap') . '/js/navbar-fixed-top.js');
+      }
+      if($navbar_position == 'static-top'){
+        backdrop_add_js(backdrop_get_path('theme', 'bootstrap') . '/js/navbar-static-top.js');
+      }
     }
   }
 }
