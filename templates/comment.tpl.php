@@ -54,23 +54,6 @@
  * @see theme_comment()
  *
  * @ingroup themeable
-
-
-<li class="media">
-                                    <a href="#" class="pull-left">
-                                        <img src="assets/img/1.png" alt="" class="img-circle">
-                                    </a>
-                                    <div class="media-body">
-                                        <span class="text-muted pull-right">
-                                            <small class="text-muted">30 min ago</small>
-                                        </span>
-                                        <strong class="text-success">@ Rexona Kumi</strong>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            Lorem ipsum dolor sit amet, <a href="#"># consectetur adipiscing </a>.
-                                        </p>
-                                    </div>
-                                </li>
  */
 ?>
 <article class="media <?php if ($new) print "bg-info" ?> <?php print implode(' ', $classes); ?> clearfix"<?php print backdrop_attributes($attributes); ?>>
