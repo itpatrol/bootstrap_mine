@@ -175,7 +175,6 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#empty_value' => NULL,
     '#prefix' => '<div class="section-preview">',
     '#suffix' => '</div>',
-    '#wrapper_attributes' => array('class' => array('col-xs-12','col-sm-6')),
   );
   if (empty($bootswatch_themes)) {
     $form['bootstrap_cdn']['bootstrap_bootswatch']['#prefix'] = '<div class="alert alert-danger messages error"><strong>' . t('ERROR') . ':</strong> ' . t('Unable to reach Bootswatch API. Please ensure the server your website is hosted on is able to initiate HTTP requests.') . '</div>';
