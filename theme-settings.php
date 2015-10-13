@@ -166,15 +166,23 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
       }
     }
   }  
-    
-  $form['bootstrap_cdn']['bootstrap_bootswatch'] = array(
-    '#type' => 'radios',
+  $form['bootstrap_cdn']['bootswatch'] = array(
+    '#type' => 'fieldset',
     '#title' => t('Bootswatch theme'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#group' => 'bootstrap',
     '#description' => t('Use !bootstrapcdn to serve a Bootswatch Theme. Choose Bootswatch theme here.', array(
       '!bootstrapcdn' => l(t('BootstrapCDN'), 'http://bootstrapcdn.com', array(
         'external' => TRUE,
       )),
     )),
+  );
+
+    
+  $form['bootstrap_cdn']['bootswatch']['bootstrap_bootswatch'] = array(
+    '#type' => 'radios',
+    '#title' => t('Select theme'),
     '#default_value' => theme_get_setting('bootstrap_bootswatch', 'bootstrap'),
     '#options' => $bootswatch_themes,
     '#empty_option' => t('Disabled'),
@@ -183,7 +191,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#suffix' => '</div>',
   );
   if (empty($bootswatch_themes)) {
-    $form['bootstrap_cdn']['bootstrap_bootswatch']['#prefix'] = '<div class="alert alert-danger messages error"><strong>' . t('ERROR') . ':</strong> ' . t('Unable to reach Bootswatch API. Please ensure the server your website is hosted on is able to initiate HTTP requests.') . '</div>';
+    $form['bootstrap_cdn']['bootswatch']['bootstrap_bootswatch']['#prefix'] = '<div class="alert alert-danger messages error"><strong>' . t('ERROR') . ':</strong> ' . t('Unable to reach Bootswatch API. Please ensure the server your website is hosted on is able to initiate HTTP requests.') . '</div>';
   }
 }
 
