@@ -14,7 +14,8 @@ body div#admin-bar{
   z-index:1600;
 }
 
-#navbar {
+.admin-bar #navbar {
+  padding-top: 33px;
 }
 
 .navbar-brand img{
