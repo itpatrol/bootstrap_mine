@@ -27,13 +27,6 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#group' => 'bootstrap',
   );
 
-  $form['tweaks']['bootstrap_datetime'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Show "XX time ago".'),
-    '#default_value' => theme_get_setting('bootstrap_datetime', 'bootstrap'),
-    '#description' => t('If enabled, replace date output for nodes and comments by "XX time ago".'),
-  );
-
   $form['tweaks']['bootstrap_container'] = array(
     '#type' => 'select',
     '#title' => t('Container type'),
@@ -44,6 +37,13 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
       'full' => t('Fluid'),
     ),
     '#empty_option' => t('Fixed'),
+  );
+
+  $form['tweaks']['bootstrap_datetime'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show "XX time ago".'),
+    '#default_value' => theme_get_setting('bootstrap_datetime', 'bootstrap'),
+    '#description' => t('If enabled, replace date output for nodes and comments by "XX time ago".'),
   );
 
   $form['breadcrumbs'] = array(
