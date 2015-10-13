@@ -35,8 +35,7 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#options' => array(
       'container' => t('Fixed'),
       'container-fluid' => t('Fluid'),
-    ),
-    '#empty_option' => t('Fixed'),
+    )
   );
 
   $form['tweaks']['bootstrap_datetime'] = array(
