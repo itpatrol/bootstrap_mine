@@ -12,6 +12,12 @@
   position: relative
 }
 
+.section-preview .preview .image img {
+  width:200px;
+  height: 120px;
+  overflow: hidden;
+}
+
 .section-preview .preview .image:before {
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1);
   position: absolute;
