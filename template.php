@@ -125,14 +125,6 @@ function bootstrap_preprocess_layout(&$variables) {
       bootstrap_is_header(true);
     }
   }
-  
-  foreach($layout->positions as $region_name => $region_value){
-    if($well = theme_get_setting('bootstrap_well_' . $layout_name . '_' . $region_name)){
-      backdrop_add_js('(function($){ $(".l-' . $region_name . '").addClass("' . $well . '");})(jQuery);', array('type' => 'inline', 'scope' => 'footer'));
-    }
-  }
-  backdrop_add_js('(function($){ $(".layout").addClass("' . theme_get_setting('bootstrap_container') . '");})(jQuery);', array('type' => 'inline', 'scope' => 'footer'));
-  
 }
 
 function bootstrap_preprocess_page(&$variables){
