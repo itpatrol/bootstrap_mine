@@ -34,7 +34,7 @@
   margin-bottom: 2em
 }
 
-.form-item-bootstrap-bootswatch {
+div.radio.form-item.form-type-radio.form-item-bootstrap-bootswatch {
   display: inline-block;
   padding: 5px;
   width: 100%;
@@ -44,7 +44,7 @@
 
 
 @media (min-width:768px){
-  .form-item-bootstrap-bootswatch {
+  div.radio.form-item.form-type-radio.form-item-bootstrap-bootswatch {
     width: 30%;
   }
 }
