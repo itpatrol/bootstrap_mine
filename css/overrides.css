@@ -1,5 +1,6 @@
+/* Navbar + admin-bar fixes */
 body.navbar-is-fixed-bottom{
-  padding-bottom:64px!important;
+  padding-bottom:50px!important;
 }
 
 body.navbar-is-fixed-top {
@@ -18,21 +19,12 @@ body.navbar-admin-bar.navbar-is-fixed-top .navbar-fixed-top  {
   padding-top: 33px;
 }
 
+/* logo fixes to meet navbar requirements by size*/
 .navbar-brand img{
   height: 40px;
   float: left;
   margin-top: -10px;
   padding-right: 10px;
-}
-
-@media screen and (min-width:768px){
-  .navbar .logo{
-    margin-right:0;padding-left:0;
-  }
-}
-
-.navbar .logo img{
-  height: 32px;
 }
 
 ul li.collapsed,ul li.expanded,ul li.leaf{
