@@ -18,7 +18,7 @@ body div#admin-bar{
   padding-top: 33px;
 }
 
-header#navbar.navbar.navbar-default.navbar-static-top-padding.navbar-static-top {
+header#navbar.navbar-static-top-padding {
   padding-top: 0px;
 }
 
