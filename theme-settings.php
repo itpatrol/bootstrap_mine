@@ -34,6 +34,18 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     '#description' => t('If enabled, replace date output for nodes and comments by "XX time ago".'),
   );
 
+  $form['tweaks']['bootstrap_container'] = array(
+    '#type' => 'select',
+    '#title' => t('Container type'),
+    '#default_value' => theme_get_setting('bootstrap_container', 'bootstrap'),
+    '#description' => t('Switch between full width (fluid) or fixed (max 1170px) width.'),
+    '#options' => array(
+      'fixed' => t('Fixed'),
+      'full' => t('Fluid'),
+    ),
+    '#empty_option' => t('Fixed'),
+  );
+
   $form['breadcrumbs'] = array(
     '#type' => 'fieldset',
     '#title' => t('Breadcrumbs'),
