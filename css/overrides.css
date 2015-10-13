@@ -133,6 +133,13 @@ tr.even {
   padding: 1em;
 }
 
+a.fieldset-title,
+a.fieldset-title:focus,
+a.fieldset-title:hover {
+  text-decoration: none;
+}
+
+/* Fix drop button style in admin area. */
 .dropbutton .dropbutton-action > * {
   padding: 6px 12px;  
 }
@@ -143,10 +150,12 @@ tr.even {
   border: none;
 }
 
+/* Fix Hanle for drag&drop. */
 div.handle {
   box-sizing: content-box;
 }
 
+/* Fix tabs. */
 div.tabs {
   padding-bottom: 10px;
 }
@@ -155,12 +164,7 @@ ul.action-links i.fa {
   padding-right: 10px;
 }
 
-a.fieldset-title,
-a.fieldset-title:focus,
-a.fieldset-title:hover {
-  text-decoration: none;
-}
-
+/* Fix icons for collapsibel fieldset. */
 .js fieldset.collapsible .fieldset-title {
   background: none;
   padding-left: 0px;
@@ -187,6 +191,7 @@ a.fieldset-title:hover {
   padding-right: 10px;
 }
 
+/* Fix VIEWS UI. */
 .container-inline div {
   display: inline-block;
 }
@@ -221,15 +226,18 @@ a.fieldset-title:hover {
   border-top: 1px solid #ddd;
 }
 
+/* Fix page title padding. */
 h1.page-title {
   padding-bottom: 15px;
 }
 
+/* Style user pic. */
 .user-picture img {
   border: 1px solid #e5e7e8;
   padding: 1px; 
 }
 
+/* Style nodes and coments in twitter style. */
 .view-mode-teaser,
 .comment {
   padding-bottom: 15px;
@@ -238,6 +246,7 @@ h1.page-title {
   border-bottom: 1px dashed #efefef;
 }
 
+/* Add spacing for pager. */
 ul.pager {
   padding-top: 20px;
 }
