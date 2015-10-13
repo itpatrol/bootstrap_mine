@@ -765,7 +765,6 @@ function bootstrap_preprocess_views_view_table(&$variables) {
  */
 function bootstrap_form_alter(array &$form, array &$form_state = array(), $form_id = NULL) {
   if ($form_id) {
-    print_r($form['actions']);
     if(isset($form['actions']['cancel']) && isset($form['actions']['cancel']['#type']) && $form['actions']['cancel']['#type'] == 'link'){
        $form['actions']['cancel']['#options']['attributes']['class'][] = 'btn';
        $form['actions']['cancel']['#options']['attributes']['class'][] = 'btn-default';
