@@ -861,3 +861,17 @@ function bootstrap_preprocess_user_picture(&$variables) {
     }
   }
 }
+
+function bootstrap_preprocess_comment(&$variables){
+  if (theme_get_setting('bootstrap_datetime')) {
+    $comment = $variables['elements']['#comment'];
+    $variables['timeago'] = t('@time ago', array('@time' => format_interval(time() - $comment->changed)));
+  }
+}
+
+function bootstrap_preprocess_node(&$variables){
+  if (theme_get_setting('bootstrap_datetime')) {
+    $node = $variables['elements']['#node'];
+    $variables['timeago'] = t('@time ago', array('@time' => format_interval(time() - $node->created)));
+  }
+}

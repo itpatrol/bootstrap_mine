@@ -96,7 +96,7 @@
   <div class="media-body">
     <?php if ($display_submitted): ?>
     <span class="text-muted pull-right">
-        <small class="text-muted"><?php print $date; ?></small>
+        <small class="text-muted"><?php isset($timeago) ? print $timeago : print $date; ?></small>
     </span>
     <strong class="text-success"><?php print theme('username',array('account' => user_load($uid))); ?></strong>
     <?php endif; ?>

@@ -64,7 +64,7 @@
   <?php endif; ?>  
   <div class="media-body">
     <span class="text-muted pull-right">
-        <small class="text-muted"><?php print $changed; ?></small>
+        <small class="text-muted"><?php isset($timeago) ? print $timeago : print $changed; ?></small>
     </span>
     <strong class="text-success"><?php print $author; ?></strong>
     <div class="content"<?php print backdrop_attributes($content_attributes); ?>>
