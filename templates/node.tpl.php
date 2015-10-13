@@ -85,7 +85,7 @@
  * @ingroup themeable
  */
 ?>
-<article id="media node-<?php print $node->nid; ?>" class="<?php print implode(' ', $classes); ?> clearfix"<?php print backdrop_attributes($attributes); ?>>
+<article id="node-<?php print $node->nid; ?>" class="media <?php print implode(' ', $classes); ?> clearfix"<?php print backdrop_attributes($attributes); ?>>
   <?php if ($display_submitted): ?>  
     <?php if($user_picture): ?>
       <div class="pull-left">
