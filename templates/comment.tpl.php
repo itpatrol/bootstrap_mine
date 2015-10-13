@@ -84,7 +84,7 @@
         <small class="text-muted"><?php print $changed; ?></small>
     </span>
     <strong class="text-success"><?php print $author; ?></strong>
-    <p class="content"<?php print backdrop_attributes($content_attributes); ?>>
+    <div class="content"<?php print backdrop_attributes($content_attributes); ?>>
       <?php
         // We hide the links now so that we can render them later.
         hide($content['links']);
@@ -95,7 +95,7 @@
         <?php print $signature; ?>
       </div>
       <?php endif; ?>
-    </p>
+    </div>
     <div class="pull-right">
     <?php print render($content['links']) ?>
     </div>
