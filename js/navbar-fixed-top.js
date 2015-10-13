@@ -8,6 +8,7 @@
     $("#navbar").removeClass('navbar-fixed-top');
     $("body").removeClass('navbar-is-fixed-top');
     $("#navbar").addClass('navbar-static-top');
+    $("#navbar").addClass('navbar-static-top-padding');
 
     jQuery(window).scroll(function() {
       var win = jQuery(this);
