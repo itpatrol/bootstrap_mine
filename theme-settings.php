@@ -151,7 +151,13 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
   );
 
   $bootswatch_themes = array();
-  $bootswatch_themes[''] = bootstrap_bootswatch_template(array('name' => t('Default'), 'description' => t('Pure Bootstrap CSS')));
+  $default_theme_details = array(
+    'name' => t('Default'),
+    'description' => t('Pure Bootstrap CSS'),
+    'thumbnail' => backdrop_get_path('theme', 'bootstrap') . '/screenshot.png',
+  );
+  
+  $bootswatch_themes[''] = bootstrap_bootswatch_template();
   $request = drupal_http_request('http://api.bootswatch.com/3/');
   if ($request && $request->code === '200' && !empty($request->data)) {
     if (($api = backdrop_json_decode($request->data)) && is_array($api) && !empty($api['themes'])) {
