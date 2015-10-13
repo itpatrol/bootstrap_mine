@@ -138,7 +138,9 @@ function bootstrap_preprocess_page(&$variables){
   {
     $variables['classes'][] = 'navbar-is-' . $navbar_position;
     
-    if($navbar_position == 'fixed-top' && user_access('access administration bar') && !admin_bar_suppress(FALSE)){
+     $config = config('admin_bar.settings');
+     
+    if($navbar_position == 'fixed-top' && user_access('access administration bar') && !admin_bar_suppress(FALSE) && !$config->get('position_fixed') ){
       backdrop_add_js(backdrop_get_path('theme', 'bootstrap') . '/js/navbar-fixed-top.js');
     }
     if($navbar_position == 'static-top'){
