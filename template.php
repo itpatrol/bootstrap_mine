@@ -112,6 +112,8 @@ function bootstrap_is_header($set = 'get'){
   } else{
     $is_header = $set;
   }
+  echo "debug info: $set $is_header";
+  
 }
 
 /**
