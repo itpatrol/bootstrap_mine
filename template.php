@@ -72,7 +72,7 @@ function bootstrap_js_alter(&$js) {
 }
 
 /**
- * internal function to make sure Header block is rendered.
+ * Internal function to make sure Header block is rendered.
  */
 function bootstrap_is_header($set){
   static $is_header;
