@@ -1,5 +1,5 @@
-codestyle:
-  default: drupal
+code_style:
+  default: [drupal, codespell]
 deploy:
   master:
     server: alpha.robin-panel.org
