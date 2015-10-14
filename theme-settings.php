@@ -207,7 +207,9 @@ function bootstrap_bootswatch_template($bootswatch_theme){
       <h3>' . $bootswatch_theme['name'] . '</h3>
       <p>' . $bootswatch_theme['description'] . '</p>';
   if(isset($bootswatch_theme['preview'])){
-    $output .= '<div class="btn-group"><a class="btn btn-info" href="' . $bootswatch_theme['preview'] . '" target="_blank">Preview</a></div>';
+    $output .= '<div class="btn-group"><a class="btn btn-info" href="' . $bootswatch_theme['preview'] . '" target="_blank">' . t('Preview') . '</a></div>';
+  }else{
+    $output .= '<div class="btn-group"><a class="btn btn-default disabled" href="#" target="_blank">' . t('No preview') . '</a></div>';
   }
   $output .= '</div>
   </div>';
