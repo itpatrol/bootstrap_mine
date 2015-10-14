@@ -182,7 +182,6 @@ function bootstrap_form_system_theme_settings_alter(&$form, &$form_state, $form_
     
   $form['bootswatch']['bootstrap_bootswatch'] = array(
     '#type' => 'radios',
-    '#title' => t('Select theme'),
     '#default_value' => theme_get_setting('bootstrap_bootswatch', 'bootstrap'),
     '#options' => $bootswatch_themes,
     '#empty_option' => t('Disabled'),
