@@ -5,34 +5,6 @@
  */
 
 /**
- * Implements hook_theme().
- *
- * Register theme hook implementations.
- *
- * The implementations declared by this hook have two purposes: either they
- * specify how a particular render array is to be rendered as HTML (this is
- * usually the case if the theme function is assigned to the render array's
- * #theme property), or they return the HTML that should be returned by an
- * invocation of theme().
- *
- * @see _bootstrap_theme()
-
-function bootstrap_theme(&$existing, $type, $theme, $path) {
-  echo "1";
-  bootstrap_include($theme, 'theme/registry.inc');
-  print_r(_bootstrap_theme($existing, $type, $theme, $path));
-  return _bootstrap_theme($existing, $type, $theme, $path);
-}
- */
-/**
- * Declare various hook_*_alter() hooks.
- *
- * hook_*_alter() implementations must live (via include) inside this file so
- * they are properly detected when drupal_alter() is invoked.
- */
-//bootstrap_include('bootstrap', 'theme/alter.inc');
-
-/**
  * Implements hook_css_alter().
  */
 function bootstrap_css_alter(&$css) {
@@ -99,6 +71,9 @@ function bootstrap_js_alter(&$js) {
   }
 }
 
+/**
+ * internal function to make sure Header block is rendered.
+ */
 function bootstrap_is_header($set){
   static $is_header;
   if(0 == strcmp($set, 'get') ){
@@ -124,6 +99,9 @@ function bootstrap_preprocess_layout(&$variables) {
   backdrop_add_js('(function($){ $(".layout").addClass("' . theme_get_setting('bootstrap_container') . '");})(jQuery);', array('type' => 'inline', 'scope' => 'footer'));
 }
 
+/**
+ * Implements hook_preprocess_page().
+ */
 function bootstrap_preprocess_page(&$variables){
   $no_old_ie_compatibility_modes = array(
     '#tag' => 'meta',
@@ -154,10 +132,10 @@ function bootstrap_preprocess_page(&$variables){
   }
 }
 
+/**
+ * Implements hook_preprocess_header().
+ */
 function bootstrap_preprocess_header(&$variables){
-/*  $menu = menu_tree('main-menu');
-  $variables['navigation'] = render($menu);*/
-  
   $variables['navigation'] = '';
   
   if($navbar_position = theme_get_setting('bootstrap_navbar_user_menu'))
@@ -182,6 +160,9 @@ function bootstrap_preprocess_header(&$variables){
   }
 }
 
+/**
+ * Implements hook_links().
+ */
 function bootstrap_links__header_menu($menu){
   $menu['attributes']['class'] = array('menu','nav','navbar-nav');
   if($navbar_menu_position = theme_get_setting('bootstrap_navbar_menu_position')){
@@ -190,6 +171,9 @@ function bootstrap_links__header_menu($menu){
   return theme_links($menu);
 }
 
+/**
+ * Implements hook_menu_tree().
+ */
 function bootstrap_menu_tree__user_menu($variables){
   if($navbar_position = theme_get_setting('bootstrap_navbar_user_menu')){
     return '
@@ -205,7 +189,6 @@ function bootstrap_menu_tree__user_menu($variables){
   return theme_menu_tree($variables);
 }
 
-
 /**
  * Returns HTML for a fieldset form element and its children.
  *
@@ -218,7 +201,6 @@ function bootstrap_menu_tree__user_menu($variables){
  * @ingroup themeable
  */
 function bootstrap_fieldset($variables) {
-//  print_r($variables);
   if(isset($variables['element']['#group_fieldset']) && !empty($variables['element']['#group_fieldset'])){
     return theme_fieldset($variables);
   }
@@ -385,8 +367,6 @@ function bootstrap_form_element($variables){
   if($variables['element']['#type'] == 'radio'){
     $variables['element']['#wrapper_attributes']['class'][] = 'radio';
   }
-//  $variables['element']['#wrapper_attributes']['class'][] = 'input-group';
-  
   $description = FALSE;
   if(isset($variables['element']['#description'])){
     $description = $variables['element']['#description'];
@@ -658,6 +638,9 @@ function bootstrap_menu_local_tasks(&$variables) {
   return $output;
 }
 
+/**
+ * Implements hook_links().
+ */
 function bootstrap_links__dropbutton($menu){
   foreach($menu['links'] as $name => $settings){
     $menu['links'][$name]['attributes']['class'][] = 'btn';
@@ -757,16 +740,13 @@ function bootstrap_container($variables) {
   if(isset($variables['element']['#attributes']['class'][0]) && $variables['element']['#attributes']['class'][0] == 'views-display-column'){
     $variables['element']['#attributes']['class'] = array('col-xs-12','cols-sm-12', 'col-md-4');
   }
-//  print_r($variables['element']);
   return theme_container($variables);
 }
-
 
 /**
  * Display a view as a table style.
  */
 function bootstrap_preprocess_views_view_table(&$variables) {
-//  template_preprocess_views_view_table($variables);
   $variables['classes'][] = 'table';
 }
 
@@ -872,6 +852,9 @@ function bootstrap_preprocess_user_picture(&$variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_comment().
+ */
 function bootstrap_preprocess_comment(&$variables){
   if (theme_get_setting('bootstrap_datetime')) {
     $comment = $variables['elements']['#comment'];
@@ -879,6 +862,9 @@ function bootstrap_preprocess_comment(&$variables){
   }
 }
 
+/**
+ * Implements hook_preprocess_node().
+ */
 function bootstrap_preprocess_node(&$variables){
   if (theme_get_setting('bootstrap_datetime')) {
     $node = $variables['elements']['#node'];
