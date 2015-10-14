@@ -1,3 +1,5 @@
+codestyle:
+  default: drupal
 deploy:
   master:
     server: alpha.robin-panel.org
